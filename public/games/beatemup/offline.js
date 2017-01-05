@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1483638238,
+	"version": 1483642464,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -8,8 +8,6 @@
 		"images/gui_jump-sheet0.png",
 		"images/gui_left-sheet0.png",
 		"images/gui_right-sheet0.png",
-		"images/gui_up-sheet0.png",
-		"images/gui_down-sheet0.png",
 		"images/s_dummy-sheet0.png",
 		"images/s_dummy2-sheet0.png",
 		"images/s_demo-sheet0.png",
@@ -26,6 +24,8 @@
 		"images/s_cam_stop-sheet0.png",
 		"images/s_black-sheet0.png",
 		"images/s_scene-sheet0.png",
+		"images/sprite-sheet0.png",
+		"images/sprite2-sheet0.png",
 		"media/thud 2.m4a",
 		"media/thud 2.ogg",
 		"icon-16.png",
