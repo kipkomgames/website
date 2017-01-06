@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1483648685,
+	"version": 1483710515,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -17,6 +17,7 @@
 		"images/s_character-sheet2.png",
 		"images/s_enemy_slasher-sheet0.png",
 		"images/s_enemy_slasher-sheet1.png",
+		"images/s_enemy_slasher-sheet2.png",
 		"images/s_player-sheet0.png",
 		"images/s_health-sheet0.png",
 		"images/s_movement-sheet0.png",
@@ -26,6 +27,8 @@
 		"images/s_scene-sheet0.png",
 		"images/sprite-sheet0.png",
 		"images/sprite2-sheet0.png",
+		"images/sprite4-sheet0.png",
+		"images/sprite5-sheet0.png",
 		"media/thud 2.m4a",
 		"media/thud 2.ogg",
 		"icon-16.png",
