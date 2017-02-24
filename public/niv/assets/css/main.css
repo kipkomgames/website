@@ -1262,7 +1262,7 @@
 
 				#header .inner .content h1 {
 					font-size: 4em;
-					font-family: 'Pattaya', sans-serif;
+					/*font-family: 'Pattaya', sans-serif;*/
 					margin: 0 0 .25em 0;
 					color: #fff;
 				}
@@ -1451,7 +1451,7 @@
 			#footer .inner .content,
 			#footer .inner .copyright {
 				width: 50%;
-				text-align: left;
+				text-align: right;
 				color: rgba(255, 255, 255, 0.75);
 				padding: 2em;
 				display: inline-block;
@@ -1461,6 +1461,9 @@
 				#footer .inner .copyright h3 {
 					color: #FFF;
 					font-size: 1.75em;
+				}
+				#footer .inner .content h5{
+					color: white;
 				}
 
 				#footer .inner .content a,
