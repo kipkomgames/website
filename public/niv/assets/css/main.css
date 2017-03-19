@@ -1463,6 +1463,7 @@
 					font-size: 1.75em;
 				}
 				#footer .inner .content h5{
+					direction: rtl;
 					color: white;
 				}
 
