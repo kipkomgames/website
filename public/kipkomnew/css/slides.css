@@ -5106,7 +5106,7 @@ body {
 }
 
 .pink {
-  background: #E91E63 !important;
+  background: linear-gradient(to right, rgba(24, 90, 157, 0.89), rgba(67, 206, 162, 0.92));
   color: #fff !important;
 }
 .pink svg {
@@ -9187,4 +9187,5 @@ font-weight: 900;
   font-size: 100px;
 
 }
+.button pink ae-2 margin-top-2
 /*# sourceMappingURL=slides.css.map */
