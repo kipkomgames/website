@@ -1300,10 +1300,11 @@ form.center input, form.center textarea {
   overflow: hidden;
 }
 .container .wrap * {
-  -webkit-user-select: text;
-  -moz-user-select: text;
-  -ms-user-select: text;
-  user-select: text;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  pointer-events: none;
+  user-select: none;
 }
 
 .slide .background,
