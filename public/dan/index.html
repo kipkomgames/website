@@ -168,12 +168,19 @@
       </div>
     </div>
   </div>
+  
   <div class="background" style="background">
-    <video poster="assets/img/img-20.jpg" autoplay="" loop="" muted="">
+    <video poster="assets/img/img-20.jpg" id="guy"autoplay="" loop="" muted="">
       <source src="assets/img/vid.mp4" type="video/mp4">
       <source src="/path/to/video.webm" type="video/webm">
       <source src="/path/to/video.ogv" type="video/ogv">
     </video>
+    <style>
+video { 
+  -webkit-transform: scaleX(2); 
+  -moz-transform: scaleX(2);
+}
+</style>
   </div>
   <!--<div class="background" style="background-image:url(assets/img/img-20.jpg)"></div>-->
 </section>
@@ -231,11 +238,7 @@
                 <p class="small">Unforgettable feelings through a quality music.</p>
               </a>
             </li>
-             <li class="col-4-12 ae-7">
-              <a href="#" class="cell-64 equalElement last">
-                <i class="material-icons">important_devices</i>
-                <h3>Best Music</h3>
-                <p class="small">Unforgettable feelings through a quality music.</p>
+            
           </ul>
         </div>
         
