@@ -174,7 +174,7 @@ h1.big, .h1.big {
   line-height: 1;
 }
 h1.huge, .h1.huge {
-  font-size: 100px;
+  font-size: 72px;
   line-height: 1;
   letter-spacing: -0.04em;
   margin-bottom: 40px;
@@ -260,12 +260,12 @@ h5,
   margin-bottom: 3px;
 }
 
-p,
-.p {
+p, .p {
   font-size: 24px;
-  line-height: 1.385;
+  line-height: 1.8;
   margin-bottom: 30px;
   opacity: 0.8;
+  padding-left: -50px;
 }
 p.hero,
 .p.hero {
@@ -1234,7 +1234,7 @@ form.center input, form.center textarea {
 
 /* Background Fade */
 .fade .content {
-  background: rgba(17, 19, 20, 0.6);
+  background: rgba(92, 63, 255, 0.88);
 }
 
 /*default*/
