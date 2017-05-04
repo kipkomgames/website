@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express.js": "^1.0.0"
+    "body-parser": "^1.17.1",
+    "express.js": "^1.0.0",
+    "nodemailer": "^4.0.1"
   }
 }
