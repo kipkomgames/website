@@ -9177,5 +9177,13 @@ form input[type="email"].input-96 {
 .background video{
   width: 100%;
 }
+.p-footer{
+  font-size: 20px;
+font-weight: 900;
+}
+.pae-1{
+  letter-spacing: 6px;
+  font-weight: 700;
 
+}
 /*# sourceMappingURL=slides.css.map */
