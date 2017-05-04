@@ -1303,8 +1303,8 @@ form.center input, form.center textarea {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  pointer-events: none;
   user-select: none;
+
 }
 
 .slide .background,
@@ -9187,6 +9187,10 @@ font-weight: 900;
   letter-spacing: 2px;
   font-weight: 600;
   font-size: 100px;
+
+}
+.box-69.equalElement{
+pointer-events: none;
 
 }
 /*# sourceMappingURL=slides.css.map */
