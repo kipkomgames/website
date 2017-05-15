@@ -3468,7 +3468,7 @@ blockquote {
 .kopa-btn.yellow-btn {
   color: #111111;
   background: #ffdb00; 
-  margin: 50px;
+  /*margin: 10000px;*/
   display:block;
   text-align: center;}
 
