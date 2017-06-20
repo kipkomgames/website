@@ -1,0 +1,1741 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/utils.js"></script>
+    <script type="text/javascript">
+        /*<![CDATA[*/
+        Utils.send_impression('', '');
+        var gvars = {
+            'gi': 2604
+            , 'ci': 5297
+            , 'wl': 52
+            , 'rd': 4
+            , 'ap': 0
+            , 'ae': 0
+            , 'lg': 'en'
+        };
+        /*]]>*/
+    </script>
+    <title> The Brit Method </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Cabin:400,500,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <!-- FORM -->
+    <style>
+        #caffForm {
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        #caffForm .row label {
+            display: none;
+        }
+        
+        .form-control {
+            width: 100%;
+            display: block;
+            padding: 10px;
+            font-size: 14px;
+            border: 3px solid #1e387b;
+            color: #555;
+            background-color: #fff;
+            height: auto;
+            border-radius: 0;
+            text-transform: uppercase;
+            background-image: none;
+        }
+        
+        .form-group {
+            margin-bottom: 6px;
+        }
+        
+        div.checkbox {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        #caffForm .tradeBtn {
+            width: 100%;
+            padding: 16px;
+            background-color: #3EA9FF;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-family: 'Cabin';
+            font-size: 22px;
+            border-bottom: 5px solid #276FB3;
+            margin-bottom: 15px;
+        }
+        /* placeholder text color */
+        
+        ::-webkit-input-placeholder {
+            color: #333333 !important;
+        }
+        
+        :-moz-placeholder {
+            color: #333333 !important;
+        }
+        
+        ::-moz-placeholder {
+            color: #333333 !important;
+        }
+        
+        :-ms-input-placeholder {
+            color: #333333 !important;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            //Disable Right Click            
+            //document.oncontextmenu = document.body.oncontextmenu = function() {return false;}              
+            //Scroll To
+            $('.nav ul li a').click(function () {
+                var rel = $(this).attr('rel');
+                $('html, body').animate({
+                    scrollTop: $('#' + rel).offset().top
+                }, 500);
+            });
+            //Open Modal
+            $('.open-modal').click(function () {
+                $('#overlay').fadeIn();
+                $('#modal').fadeIn();
+            });
+            //Close Modal Icon
+            $('#close-modal').click(function () {
+                $('#overlay').fadeOut();
+                $('#modal').fadeOut();
+            });
+            //Close Modal when clicking outside
+            $(document).mouseup(function (e) {
+                var container = $('#modal');
+                if (!container.is(e.target) // if the target of the click isn't the container...
+                    && container.has(e.target).length === 0) // ... nor a descendant of the container
+                {
+                    container.fadeOut();
+                    $('#overlay').fadeOut();
+                }
+            });
+            //Currency Symbol
+            $('.prize-currency').html('£');
+        });
+        //Prevent the leave script when user submit the form
+        setTimeout(function () {
+            $('a, input[type="submit"]').click(function () {
+                show = false;
+            });
+        }, 2000);
+    </script>
+    <style>
+        body {
+            font-family: 'Cabin';
+        }
+        
+        .ribbon {
+            position: fixed;
+            top: 0;
+            right: 0;
+            background: url(img/en/ribbon.png);
+            width: 170px;
+            height: 171px;
+            z-index: 20;
+        }
+        
+        @media only screen and (max-width:1200px) {
+            .ribbon {
+                display: none;
+            }
+        }
+        
+        .top {
+            background: #ffffff;
+        }
+        
+        .content {
+            background: url(img/en/bg.jpg);
+        }
+        
+        .header {
+            background: url(img/en/header.jpg);
+            padding: 40px 0;
+        }
+        
+        .videoWrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            border: 4px solid #1e387b;
+        }
+        
+        .videoWrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        a,
+        a:visited,
+        a:hover {
+            text-decoration: none;
+        }
+        
+        h1 {
+            color: #1e387b;
+            font-family: 'Cabin';
+            font-size: 46px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+        
+        h2 {
+            color: #1e387b;
+            font-family: 'Cabin';
+            font-size: 40px;
+            text-transform: capitalize;
+        }
+        
+        @media only screen and (max-width:992px) {
+            h1 {
+                text-align: center;
+                margin: 20px 0;
+            }
+            .first-p {
+                text-align: center;
+                font-size: 28px;
+                font-weight: 500;
+            }
+        }
+        
+        .nav {
+            background: #1e387b;
+            margin: 40px 0;
+        }
+        
+        .nav ul {
+            padding: 0;
+            margin: auto;
+            text-align: center;
+        }
+        
+        .nav ul li {
+            display: inline-block;
+            list-style-type: none;
+        }
+        
+        .nav ul li a {
+            display: block;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 14px 34px;
+            color: #cedbff;
+            cursor: pointer;
+        }
+        
+        @media only screen and (max-width:992px) {
+            .nav ul {
+                width: 100%;
+            }
+            .nav ul li {
+                width: 50%;
+            }
+        }
+        
+        @media only screen and (max-width:768px) {
+            .nav ul li {
+                width: 100%;
+                border-bottom: 1px solid #2b4fa8;
+            }
+            .nav ul li:last-child {
+                border-bottom: none;
+            }
+        }
+        
+        .member {
+            background-color: #fff;
+            margin: 20px 0;
+            padding: 30px 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #ddd;
+        }
+        
+        .member p {
+            font-size: 20px;
+            font-weight: 700;
+        }
+        
+        .member h2 {
+            line-height: 40px;
+            cursor: pointer;
+        }
+        
+        .comments ul {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .comments ul li {
+            background-color: #fff;
+            list-style-type: none;
+            padding: 6px;
+            border: 1px solid #bbb;
+            border-bottom: none;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .comments ul li:last-child {
+            border-bottom: 1px solid #bbb;
+        }
+        
+        .comments img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+        
+        .comments h4 {
+            color: #39588f;
+            margin: 0;
+            font: bold 15px 'Verdana';
+            text-align: left;
+        }
+        
+        .comments .message {
+            text-align: left;
+        }
+        
+        .comments .share {
+            color: #39588f;
+            font-family: verdana;
+            text-align: left;
+            font-size: 12px;
+        }
+        
+        .comments .time {
+            position: absolute;
+            top: 3px;
+            right: 6px;
+            color: #aaa;
+            font-size: 11px;
+            font-family: verdana;
+        }
+        
+        .box {
+            background: #F0F0F0;
+            padding: 30px;
+            box-shadow: 0 0 30px #aaa;
+            width: 77%;
+        }
+        
+        @media only screen and (max-width:992px) {
+            .box {
+                width: 100%;
+            }
+        }
+        
+        @media only screen and (max-width:768px) {
+            .box .row {
+                margin-left: -30px;
+                margin-right: -30px;
+            }
+        }
+        
+        #formID input {
+            width: 100%;
+            border: 3px solid #1e387b;
+            padding: 16px;
+            margin: 4px 0;
+            text-transform: uppercase;
+        }
+        
+        #formID .input {
+            border-radius: 4px;
+        }
+        
+        #formID input:focus {
+            outline: none;
+        }
+        
+        #formID #submit {
+            background: #3EA9FF;
+            color: #fff;
+            border: none;
+            font-size: 22px;
+            font-weight: 500;
+            padding: 6px;
+            margin-bottom: 0;
+            border-bottom: 1px solid #2f80c1;
+            text-transform: capitalize;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        
+        #formID .limited {
+            background: #3295FF;
+            border-bottom: 5px solid #276FB3;
+            color: #fff;
+            font-size: 12px;
+            padding: 4px 0;
+            text-align: center;
+            margin-bottom: 20px;
+            border-top: 1px solid #3eacfe;
+            text-transform: uppercase;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        
+        .FAQ-pan p {
+            margin: 0px;
+        }
+        
+        .FAQ-pan .q-section {
+            padding-bottom: 15px;
+            padding-top: 15px;
+            border-bottom-width: 1px;
+            border-bottom-style: dotted;
+            border-bottom-color: #999999;
+            cursor: pointer;
+        }
+        
+        .FAQ-pan .q-section p {
+            margin-left: 30px;
+            font-size: 14px;
+            color: #000;
+            line-height: 18px;
+            text-align: left;
+        }
+        
+        .FAQ-pan .q-section img {
+            display: block;
+            float: left;
+            margin-top: 2px;
+        }
+        
+        .FAQ-pan .a-section {
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 30px;
+            display: none;
+            border-right-width: 1px;
+            border-bottom-width: 1px;
+            border-left-width: 1px;
+            border-right-style: dotted;
+            border-bottom-style: dotted;
+            border-left-style: dotted;
+            border-right-color: #999999;
+            border-bottom-color: #999999;
+            border-left-color: #999999;
+            margin-bottom: 20px;
+            background-color: #FFF;
+        }
+        
+        .FAQ-pan .a-section p {
+            color: #000;
+            font-style: italic;
+            text-align: left;
+        }
+        
+        .footer {
+            background: #1e387b;
+            color: #cedbff;
+            padding: 20px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        
+        #overlay {
+            background-color: rgba(0, 0, 0, 0.8);
+            margin: auto;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 990;
+        }
+        
+        #modal {
+            background-color: #fff !important;
+            margin: auto;
+            position: fixed;
+            top: 10%;
+            bottom: 10%;
+            left: 0;
+            right: 0;
+            max-width: 900px;
+            max-height: 500px;
+            width: 100%;
+            z-index: 991;
+        }
+        
+        #modal h2 {
+            margin: 0;
+        }
+        
+        #close-modal {
+            position: absolute;
+            top: 4px;
+            right: 3px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        .prize-table {
+            width: 100%;
+            font-size: 13px;
+        }
+        
+        .prize-table tr th {
+            background: #fff;
+            border: 1px solid #fff;
+            border-top: 4px solid #0086c6;
+            padding: 8px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        
+        .prize-table tr td {
+            text-align: center;
+            padding: 8px;
+            border: 1px solid #fff;
+        }
+        
+        .prize-table tr:nth-child(odd) {
+            background: #f3f5f6;
+        }
+        
+        .prize-table tr:nth-child(even) {
+            background: #d8d8d8;
+        }
+        
+        .prize-table .prize-amount {
+            font-size: 15px;
+            font-weight: 700;
+        }
+        
+        .steps {
+            color: #fff;
+            border-radius: 50%;
+            height: 300px;
+            width: 300px;
+            padding: 20px;
+            border: 10px solid #fff;
+            box-shadow: 0 0 20px #999;
+        }
+        
+        .steps h2 {
+            color: #fff;
+            margin: 0;
+            text-shadow: 1px 0px 4px #1b4d71;
+            text-transform: uppercase;
+        }
+        
+        .steps p {
+            font-size: 19px;
+            line-height: 22px;
+            text-shadow: 1px 0px 4px #1b4d71;
+        }
+        
+        .step1 {
+            background: #1b75ba;
+            /* Old browsers */
+            background: -moz-radial-gradient(center, ellipse cover, #1b75ba 0%, #115292 100%);
+            /* FF3.6-15 */
+            background: -webkit-radial-gradient(center, ellipse cover, #1b75ba 0%, #115292 100%);
+            /* Chrome10-25,Safari5.1-6 */
+            background: radial-gradient(ellipse at center, #1b75ba 0%, #115292 100%);
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#1b75ba', endColorstr='#115292', GradientType=1);
+            /* IE6-9 fallback on horizontal gradient */
+        }
+        
+        .step2 {
+            background: #00aced;
+            /* Old browsers */
+            background: -moz-radial-gradient(center, ellipse cover, #00aced 0%, #0087ca 100%);
+            /* FF3.6-15 */
+            background: -webkit-radial-gradient(center, ellipse cover, #00aced 0%, #0087ca 100%);
+            /* Chrome10-25,Safari5.1-6 */
+            background: radial-gradient(ellipse at center, #00aced 0%, #0087ca 100%);
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00aced', endColorstr='#0087ca', GradientType=1);
+            /* IE6-9 fallback on horizontal gradient */
+        }
+        
+        .step3 {
+            background: #2bc2b8;
+            /* Old browsers */
+            background: -moz-radial-gradient(center, ellipse cover, #2bc2b8 0%, #1ea393 100%);
+            /* FF3.6-15 */
+            background: -webkit-radial-gradient(center, ellipse cover, #2bc2b8 0%, #1ea393 100%);
+            /* Chrome10-25,Safari5.1-6 */
+            background: radial-gradient(ellipse at center, #2bc2b8 0%, #1ea393 100%);
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#2bc2b8', endColorstr='#1ea393', GradientType=1);
+            /* IE6-9 fallback on horizontal gradient */
+        }
+        /* Mobile Adjustments */
+        
+        @media only screen and (max-width:600px) {
+            .logo-mobile {
+                display: block !important;
+            }
+            .logo,
+            .author {
+                display: none;
+            }
+            h1 {
+                font-size: 30px !important;
+                margin-bottom: 0;
+            }
+            .first-p {
+                font-size: 16px;
+                margin-top: 0;
+            }
+            #formID #submit {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ribbon"></div>
+    <div class="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div align="center"> <img class="logo-mobile" style="display:none;" src="img/en/logo_mobile5e1f.jpg?v=2" /> </div> <img class="logo" src="img/en/logo5e1f.jpg?v=2" alt="" /> <img class="author" align="right" src="img/en/author5e1f.jpg?v=2" alt="" /> </div>
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="videoWrapper">
+                        <iframe id="ytplayer" type="text/html" src="https://www.youtube.com/embed/TEZxENTaEpY?controls=0&amp;autoplay=1&amp;showinfo=0&amp;modestbranding=1&amp;rel=0&amp;loop=0" frameborder="0"> </iframe>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h1>start now</h1>
+                    <br>
+                    <p class="first-p">Enter your email below to gain instant free access to the Brit Method system</p>
+                    <div id="caff">
+                        <script src="js/formhelpers.min.js"></script>
+                        <input id="brokerName" type="hidden" value="23Traders">
+                        <form id="caffForm" method="post" action="http://ap.valaffiliates.com/Forms/ProcForm">
+                            <input type="hidden" name="sub" value="wBUV9I2KOS1HQM0616NQ9VAM">
+                            <input type="hidden" name="rd" value="4">
+                            <input type="hidden" name="token" value="17778727%%nl9y9eu35a">
+                            <input type="hidden" name="wl" value="52">
+                            <input type="hidden" name="lg" value="en">
+                            <input type="hidden" name="so" value="">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label class="control-label">First Name</label>
+                                    <input type="text" name="firstname" placeholder="First Name" class="form-control" pattern="^[^\\0-9!@#$%^&amp;*()-]{3,15}$" required="" title="Please enter 3-15 characters (alphabets only)"> </div>
+                                <div class="col-md-6 form-group">
+                                    <label class="control-label">Last Name</label>
+                                    <input type="text" name="lastname" placeholder="Last Name" class="form-control" pattern="^[^\\0-9!@#$%^&amp;*()-]{3,15}$" required="" title="Please enter 3-15 characters (alphabets only)"> </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label class="control-label">Country</label>
+                                    <select name="countryabbr" id="countryData_caff" class="form-control bfh-countries" data-country="IN" required="">
+                                        <option value=""></option>
+                                        <option value="AF">Afghanistan</option>
+                                        <option value="AL">Albania</option>
+                                        <option value="DZ">Algeria</option>
+                                        <option value="AS">American Samoa</option>
+                                        <option value="AD">Andorra</option>
+                                        <option value="AO">Angola</option>
+                                        <option value="AI">Anguilla</option>
+                                        <option value="AQ">Antarctica</option>
+                                        <option value="AG">Antigua and Barbuda</option>
+                                        <option value="AR">Argentina</option>
+                                        <option value="AM">Armenia</option>
+                                        <option value="AW">Aruba</option>
+                                        <option value="AU">Australia</option>
+                                        <option value="AT">Austria</option>
+                                        <option value="AZ">Azerbaijan</option>
+                                        <option value="BH">Bahrain</option>
+                                        <option value="BD">Bangladesh</option>
+                                        <option value="BB">Barbados</option>
+                                        <option value="BY">Belarus</option>
+                                        <option value="BE">Belgium</option>
+                                        <option value="BZ">Belize</option>
+                                        <option value="BJ">Benin</option>
+                                        <option value="BM">Bermuda</option>
+                                        <option value="BT">Bhutan</option>
+                                        <option value="BO">Bolivia</option>
+                                        <option value="BA">Bosnia and Herzegovina</option>
+                                        <option value="BW">Botswana</option>
+                                        <option value="BV">Bouvet Island</option>
+                                        <option value="BR">Brazil</option>
+                                        <option value="IO">British Indian Ocean Territory</option>
+                                        <option value="VG">British Virgin Islands</option>
+                                        <option value="BN">Brunei</option>
+                                        <option value="BG">Bulgaria</option>
+                                        <option value="BF">Burkina Faso</option>
+                                        <option value="BI">Burundi</option>
+                                        <option value="CI">Côte d'Ivoire</option>
+                                        <option value="KH">Cambodia</option>
+                                        <option value="CM">Cameroon</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="CV">Cape Verde</option>
+                                        <option value="KY">Cayman Islands</option>
+                                        <option value="CF">Central African Republic</option>
+                                        <option value="TD">Chadddd</option>
+                                        <option value="CL">Chile</option>
+                                        <option value="CN">China</option>
+                                        <option value="CX">Christmas Island</option>
+                                        <option value="CC">Cocos (Keeling) Islands</option>
+                                        <option value="CO">Colombia</option>
+                                        <option value="KM">Comoros</option>
+                                        <option value="CG">Congo</option>
+                                        <option value="CK">Cook Islands</option>
+                                        <option value="CR">Costa Rica</option>
+                                        <option value="HR">Croatia</option>
+                                        <option value="CU">Cuba</option>
+                                        <option value="CY">Cyprus</option>
+                                        <option value="CZ">Czech Republic</option>
+                                        <option value="CD">Democratic Republic of the Congo</option>
+                                        <option value="DK">Denmark</option>
+                                        <option value="DJ">Djibouti</option>
+                                        <option value="DM">Dominica</option>
+                                        <option value="DO">Dominican Republic</option>
+                                        <option value="TP">East Timor</option>
+                                        <option value="EC">Ecuador</option>
+                                        <option value="EG">Egypt</option>
+                                        <option value="SV">El Salvador</option>
+                                        <option value="GQ">Equatorial Guinea</option>
+                                        <option value="ER">Eritrea</option>
+                                        <option value="EE">Estonia</option>
+                                        <option value="ET">Ethiopia</option>
+                                        <option value="FO">Faeroe Islands</option>
+                                        <option value="FK">Falkland Islands</option>
+                                        <option value="FJ">Fiji</option>
+                                        <option value="FI">Finland</option>
+                                        <option value="MK">Former Yugoslav Republic of Macedonia</option>
+                                        <option value="FR">France</option>
+                                        <option value="FX">France, Metropolitan</option>
+                                        <option value="GF">French Guiana</option>
+                                        <option value="PF">French Polynesia</option>
+                                        <option value="TF">French Southern Territories</option>
+                                        <option value="GA">Gabon</option>
+                                        <option value="GE">Georgia</option>
+                                        <option value="DE">Germany</option>
+                                        <option value="GH">Ghana</option>
+                                        <option value="GI">Gibraltar</option>
+                                        <option value="GR">Greece</option>
+                                        <option value="GL">Greenland</option>
+                                        <option value="GD">Grenada</option>
+                                        <option value="GP">Guadeloupe</option>
+                                        <option value="GU">Guam</option>
+                                        <option value="GT">Guatemala</option>
+                                        <option value="GN">Guinea</option>
+                                        <option value="GW">Guinea-Bissau</option>
+                                        <option value="GY">Guyana</option>
+                                        <option value="HT">Haiti</option>
+                                        <option value="HM">Heard and Mc Donald Islands</option>
+                                        <option value="HN">Honduras</option>
+                                        <option value="HK">Hong Kong</option>
+                                        <option value="HU">Hungary</option>
+                                        <option value="IS">Iceland</option>
+                                        <option value="IN">India</option>
+                                        <option value="ID">Indonesia</option>
+                                        <option value="IR">Iran</option>
+                                        <option value="IQ">Iraq</option>
+                                        <option value="IE">Ireland</option>
+                                        <option value="IL">Israel</option>
+                                        <option value="IT">Italy</option>
+                                        <option value="JM">Jamaica</option>
+                                        <option value="JP">Japan</option>
+                                        <option value="JO">Jordan</option>
+                                        <option value="KZ">Kazakhstan</option>
+                                        <option value="KE">Kenya</option>
+                                        <option value="KI">Kiribati</option>
+                                        <option value="KW">Kuwait</option>
+                                        <option value="KG">Kyrgyzstan</option>
+                                        <option value="LA">Laos</option>
+                                        <option value="LV">Latvia</option>
+                                        <option value="LB">Lebanon</option>
+                                        <option value="LS">Lesotho</option>
+                                        <option value="LR">Liberia</option>
+                                        <option value="LY">Libya</option>
+                                        <option value="LI">Liechtenstein</option>
+                                        <option value="LT">Lithuania</option>
+                                        <option value="LU">Luxembourg</option>
+                                        <option value="MO">Macau</option>
+                                        <option value="MG">Madagascar</option>
+                                        <option value="MW">Malawi</option>
+                                        <option value="MY">Malaysia</option>
+                                        <option value="MV">Maldives</option>
+                                        <option value="ML">Mali</option>
+                                        <option value="MT">Malta</option>
+                                        <option value="MH">Marshall Islands</option>
+                                        <option value="MQ">Martinique</option>
+                                        <option value="MR">Mauritania</option>
+                                        <option value="MU">Mauritius</option>
+                                        <option value="YT">Mayotte</option>
+                                        <option value="MX">Mexico</option>
+                                        <option value="FM">Micronesia</option>
+                                        <option value="MD">Moldova</option>
+                                        <option value="MC">Monaco</option>
+                                        <option value="MN">Mongolia</option>
+                                        <option value="ME">Montenegro</option>
+                                        <option value="MS">Montserrat</option>
+                                        <option value="MA">Morocco</option>
+                                        <option value="MZ">Mozambique</option>
+                                        <option value="MM">Myanmar</option>
+                                        <option value="NA">Namibia</option>
+                                        <option value="NR">Nauru</option>
+                                        <option value="NP">Nepal</option>
+                                        <option value="NL">Netherlands</option>
+                                        <option value="AN">Netherlands Antilles</option>
+                                        <option value="NC">New Caledonia</option>
+                                        <option value="NZ">New Zealand</option>
+                                        <option value="NI">Nicaragua</option>
+                                        <option value="NE">Niger</option>
+                                        <option value="NG">Nigeria</option>
+                                        <option value="NU">Niue</option>
+                                        <option value="NF">Norfolk Island</option>
+                                        <option value="KP">North Korea</option>
+                                        <option value="MP">Northern Marianas</option>
+                                        <option value="NO">Norway</option>
+                                        <option value="OM">Oman</option>
+                                        <option value="PK">Pakistan</option>
+                                        <option value="PW">Palau</option>
+                                        <option value="PS">Palestine</option>
+                                        <option value="PA">Panama</option>
+                                        <option value="PG">Papua New Guinea</option>
+                                        <option value="PY">Paraguay</option>
+                                        <option value="PE">Peru</option>
+                                        <option value="PH">Philippines</option>
+                                        <option value="PN">Pitcairn Islands</option>
+                                        <option value="PL">Poland</option>
+                                        <option value="PT">Portugal</option>
+                                        <option value="PR">Puerto Rico</option>
+                                        <option value="QA">Qatar</option>
+                                        <option value="RE">Reunion</option>
+                                        <option value="RO">Romania</option>
+                                        <option value="RU">Russia</option>
+                                        <option value="RW">Rwanda</option>
+                                        <option value="ST">Sao Tome and Principe</option>
+                                        <option value="SH">Saint Helena</option>
+                                        <option value="PM">St. Pierre and Miquelon</option>
+                                        <option value="KN">Saint Kitts and Nevis</option>
+                                        <option value="LC">Saint Lucia</option>
+                                        <option value="VC">Saint Vincent and the Grenadines</option>
+                                        <option value="WS">Samoa</option>
+                                        <option value="SM">San Marino</option>
+                                        <option value="SA">Saudi Arabia</option>
+                                        <option value="SN">Senegal</option>
+                                        <option value="RS">Serbia</option>
+                                        <option value="SC">Seychelles</option>
+                                        <option value="SL">Sierra Leone</option>
+                                        <option value="SG">Singapore</option>
+                                        <option value="SK">Slovakia</option>
+                                        <option value="SI">Slovenia</option>
+                                        <option value="SB">Solomon Islands</option>
+                                        <option value="SO">Somalia</option>
+                                        <option value="ZA">South Africa</option>
+                                        <option value="GS">South Georgia and the South Sandwich Islands</option>
+                                        <option value="KR">South Korea</option>
+                                        <option value="ES">Spain</option>
+                                        <option value="LK">Sri Lanka</option>
+                                        <option value="SD">Sudan</option>
+                                        <option value="SR">Suriname</option>
+                                        <option value="SJ">Svalbard and Jan Mayen Islands</option>
+                                        <option value="SZ">Swaziland</option>
+                                        <option value="SE">Sweden</option>
+                                        <option value="CH">Switzerland</option>
+                                        <option value="SY">Syria</option>
+                                        <option value="TW">Taiwan</option>
+                                        <option value="TJ">Tajikistan</option>
+                                        <option value="TZ">Tanzania</option>
+                                        <option value="TH">Thailand</option>
+                                        <option value="BS">The Bahamas</option>
+                                        <option value="GM">The Gambia</option>
+                                        <option value="TG">Togo</option>
+                                        <option value="TK">Tokelau</option>
+                                        <option value="TO">Tonga</option>
+                                        <option value="TT">Trinidad and Tobago</option>
+                                        <option value="TN">Tunisia</option>
+                                        <option value="TR">Turkey</option>
+                                        <option value="TM">Turkmenistan</option>
+                                        <option value="TC">Turks and Caicos Islands</option>
+                                        <option value="TV">Tuvalu</option>
+                                        <option value="VI">US Virgin Islands</option>
+                                        <option value="UG">Uganda</option>
+                                        <option value="UA">Ukraine</option>
+                                        <option value="AE">United Arab Emirates</option>
+                                        <option value="GB">United Kingdom</option>
+                                        <option value="US">United States</option>
+                                        <option value="UM">United States Minor Outlying Islands</option>
+                                        <option value="UY">Uruguay</option>
+                                        <option value="UZ">Uzbekistan</option>
+                                        <option value="VU">Vanuatu</option>
+                                        <option value="VA">Vatican City</option>
+                                        <option value="VE">Venezuela</option>
+                                        <option value="VN">Vietnam</option>
+                                        <option value="WF">Wallis and Futuna Islands</option>
+                                        <option value="EH">Western Sahara</option>
+                                        <option value="YE">Yemen</option>
+                                        <option value="ZM">Zambia</option>
+                                        <option value="ZW">Zimbabwe</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label class="control-label">Phone</label>
+                                    <input id="phoneOrig_caff" type="text" class="form-control bfh-phone" data-country="countryData_caff" data-toggle="popover" data-trigger="manual" data-placement="top" data-content="You have to use a VALID number in order to continue." pattern=".{9,20}" title="Please enter valid number" required=""> </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label class="control-label">Email</label>
+                                    <input type="email" name="email" placeholder="Email" class="form-control" required=""> </div>
+                                <div class="col-md-6 form-group">
+                                    <label class="control-label">Password</label>
+                                    <input type="password" name="password" placeholder="Password" class="form-control" pattern=".{6,12}" required="" title="Please enter 6-12 characters"> </div>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="terms" checked="" required=""> <a data-toggle="modal" data-target="#terms">I accept the Terms and Conditions</a> </label>
+                            </div>
+                            <button type="submit" class="btn btn-danger btn-lg tradeBtn">Open account now</button>
+                            <input type="hidden" name="phone" id="phone">
+                            <input type="hidden" name="prefix" id="prefix" value="1"> </form>
+                    </div>
+                    <div align="center"> <img src="/img/certs.png" alt=""> </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="nav">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ul>
+                                <li><a rel="getting_started">Getting Started</a></li>
+                                <li><a rel="current_members">Current Members Trading Accounts</a></li>
+                                <li><a rel="live_results">See Live Facebook & Twitter Feedback</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div align="center">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="step1 steps" id="getting_started">
+                                        <h2>Step 1</h2>
+                                        <p>You made it to the members area! You have nearly secured your spot! To complete this step, create your trading account now</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="step2 steps">
+                                        <h2>Step 2</h2>
+                                        <p>When you have created your trading account you will get get access to the Brit Method software and you will nearly be ready to go.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="step3 steps">
+                                        <h2>Step 3</h2>
+                                        <p>Its nearly time for profits! One last thing, you just need to deposit money into your account for trading! Hit play and make money!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <h2>Check Out My LIVE Personal Trading Account</h2>
+                            <div class="member">
+                                <div class="row">
+                                    <div class="col-md-4"> <img style="max-width:300px;width:100%;" src="img/en/me68b3.png?ver=1" alt="Me" /> </div>
+                                    <div class="col-md-4">
+                                        <p>Jake Pertu - Brit Method Founder
+                                            <br/>Profit To Date: <u>£2,187,612.00</u></p>
+                                        <h2 class="open-modal">Click Here To View My Live Account</h2> </div>
+                                    <div class="col-md-4"> <img src="img/en/vta.png" alt="Verified" /> </div>
+                                </div>
+                            </div>
+                            <h2 id="current_members">More Accounts From Our Customers</h2>
+                            <div class="member">
+                                <div class="row">
+                                    <div class="col-md-4"> <img src="img/member1bea6.png?v=7" alt="member1" /> </div>
+                                    <div class="col-md-4">
+                                        <p>Lucy Allen
+                                            <br/>Start Date: 19th May 2015
+                                            <br/> Profit To Date: <u> $212,450.00 </u> </p>
+                                        <h2 class="open-modal">Click Here To View My Live Account</h2> </div>
+                                    <div class="col-md-4"> <img src="img/en/vta.png" alt="Verified" /> </div>
+                                </div>
+                            </div>
+                            <div class="member">
+                                <div class="row">
+                                    <div class="col-md-4"> <img src="img/member2bea6.png?v=7" alt="member2" /> </div>
+                                    <div class="col-md-4">
+                                        <p>James Taylor
+                                            <br/>Start Date: 28th May 2015
+                                            <br/> Profit To Date: <u> $196,201.00 </u> </p>
+                                        <h2 class="open-modal">Click Here To View My Live Account</h2> </div>
+                                    <div class="col-md-4"> <img src="img/en/vta.png" alt="Verified" /> </div>
+                                </div>
+                            </div>
+                            <div class="member">
+                                <div class="row">
+                                    <div class="col-md-4"> <img src="img/member3bea6.png?v=7" alt="member2" /> </div>
+                                    <div class="col-md-4">
+                                        <p>Will Murphy
+                                            <br/>Start Date: 2nd June 2015
+                                            <br/> Profit To Date: <u> $103,870.00 </u> </p>
+                                        <h2 class="open-modal">Click Here To View My Live Account</h2> </div>
+                                    <div class="col-md-4"> <img src="img/en/vta.png" alt="Verified" /> </div>
+                                </div>
+                            </div>
+                            <h2 id="live_results" style="font-size:26px; margin:40px 0;">LIVE MINUTE BY MINUTE UPDATING TWITTER AND FACEBOOK FEEDS</h2>
+                            <div class="box">
+                                <div class="row">
+                                    <div class="col-md-6"> <img style="max-width:330px; width:100%;" src="img/fb.png" alt="" />
+                                        <h3>Comments</h3>
+                                        <div class="comments">
+                                            <ul>
+                                                <li> <img align="left" src="img/user1.jpg" alt="" />
+                                                    <h4>Kate</h4>
+                                                    <div class="message">Thanks support for solving my small problem, looking forward to making lots of cash with this cash thanks Brit Method support</div>
+                                                    <div class="share">Like - Comment - Share!</div>
+                                                    <div class="time">2m</div>
+                                                </li>
+                                                <li> <img align="left" src="img/user2.jpg" alt="" />
+                                                    <h4>Mark</h4>
+                                                    <div class="message">How long until the money hits my account from my broker account? Brit Method Just withdrawn 5 figures profits awesome</div>
+                                                    <div class="share">Like - Comment - Share!</div>
+                                                    <div class="time">4m</div>
+                                                </li>
+                                                <li> <img align="left" src="img/user3.jpg" alt="" />
+                                                    <h4>Linda</h4>
+                                                    <div class="message">what is happening?? My account now sits at £23,891.44 I only deposited £300 4 days ago, this is insane</div>
+                                                    <div class="share">Like - Comment - Share!</div>
+                                                    <div class="time">7m</div>
+                                                </li>
+                                                <li> <img align="left" src="img/user4.jpg" alt="" />
+                                                    <h4>Ben</h4>
+                                                    <div class="message">Thank You Thank You Thank You</div>
+                                                    <div class="share">Like - Comment - Share!</div>
+                                                    <div class="time">7m</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6"> <img style="max-width:330px; width:100%;" src="img/twt.png" alt="" />
+                                        <h3>Tweets</h3>
+                                        <div class="comments">
+                                            <ul>
+                                                <li> <img align="left" src="img/user5.jpg" alt="" />
+                                                    <h4>Jack</h4>
+                                                    <div class="message">Celebrating another profitable day using the @britmethod not had a losing day yet</div>
+                                                    <div class="share">Like - Comment - Share!</div>
+                                                    <div class="time">3m</div>
+                                                </li>
+                                                <li> <img align="left" src="img/user6.jpg" alt="" />
+                                                    <h4>Megan</h4>
+                                                    <div class="message">Just made £868.44 in a single trade @britmethod</div>
+                                                    <div class="share">Like - Comment - Share!</div>
+                                                    <div class="time">9m</div>
+                                                </li>
+                                                <li> <img align="left" src="img/user7.jpg" alt="" />
+                                                    <h4>Tiffany</h4>
+                                                    <div class="message">Thank You Thank You Thank You @britmethod</div>
+                                                    <div class="share">Like - Comment - Share!</div>
+                                                    <div class="time">11m</div>
+                                                </li>
+                                                <li> <img align="left" src="img/user8.jpg" alt="" />
+                                                    <h4>Steven</h4>
+                                                    <div class="message">Brilliant stuff, u guys are the bomb @britmethod First trade today and just made £389.11 profit #moreprofits #britmethod</div>
+                                                    <div class="share">Like - Comment - Share!</div>
+                                                    <div class="time">18m</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- box -->
+                            <h2 id="live_results">Live Third Party Verified Results!</h2>
+                            <style>
+                                .results_method table {
+                                    width: 100%;
+                                    font-size: 13px;
+                                    padding: 0;
+                                    margin: 0;
+                                    font-family: 'Arial';
+                                }
+                                
+                                .results_method th {
+                                    border-top: 4px solid #0086c6;
+                                }
+                                
+                                .results_method tr:nth-child(even) {
+                                    background: #d8d8d8;
+                                }
+                                
+                                .results_method tr:nth-child(odd) {
+                                    background: #ffffff;
+                                }
+                                
+                                .results_method tr th,
+                                tr td {
+                                    padding: 8px;
+                                    text-align: center;
+                                }
+                                
+                                .results_method .name {
+                                    color: #1e3898;
+                                    font-weight: bold;
+                                }
+                                
+                                .results_method .currency {
+                                    font-weight: bold;
+                                    font-size: 15px;
+                                }
+                            </style>
+                            <script type="text/javascript">
+                                $(function () {
+                                    setInterval(function () {
+                                        $('.results_method table').find('.trow').first().insertAfter($('.results_method table').find('.trow').last());
+                                    }, 3000);
+                                });
+                            </script>
+                            <div class="box">
+                                <div style="height:440px; overflow:hidden; ">
+                                    <div class="results_method">
+                                        <table>
+                                            <tr>
+                                                <th>The Brit Method</th>
+                                                <th>Profit</th>
+                                                <th>Trade Time</th>
+                                                <th>Currency</th>
+                                                <th>Results</th>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Karlene</span> just won a trade...</td>
+                                                <td><span class="currency">£ 470</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>NZD/USD</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Cora</span> just won a trade...</td>
+                                                <td><span class="currency">£ 249</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>USD/GBP</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Samuel</span> just won a trade...</td>
+                                                <td><span class="currency">£ 466</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>GBP/AUD</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Richard</span> just won a trade...</td>
+                                                <td><span class="currency">£ 291</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>AUD/EUR</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Leon</span> just won a trade...</td>
+                                                <td><span class="currency">£ 393</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>GBP/AUD</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">John</span> just won a trade...</td>
+                                                <td><span class="currency">£ 405</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>NZD/USD</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Susan</span> just won a trade...</td>
+                                                <td><span class="currency">£ 402</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>GBP/AUD</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Jo</span> just won a trade...</td>
+                                                <td><span class="currency">£ 460</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>EUR/AUD</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">David</span> just won a trade...</td>
+                                                <td><span class="currency">£ 238</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>USD/EUR</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Jo</span> just won a trade...</td>
+                                                <td><span class="currency">£ 478</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>USD/JPY</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Samuel</span> just won a trade...</td>
+                                                <td><span class="currency">£ 259</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>USD/NZD</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Heather</span> just won a trade...</td>
+                                                <td><span class="currency">£ 297</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>EUR/GBP</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">James</span> just won a trade...</td>
+                                                <td><span class="currency">£ 510</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>EUR/AUD</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Wendy</span> just won a trade...</td>
+                                                <td><span class="currency">£ 318</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>USD/JPY</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Robert</span> just won a trade...</td>
+                                                <td><span class="currency">£ 372</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>EUR/AUD</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Leann</span> just won a trade...</td>
+                                                <td><span class="currency">£ 273</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>USD/GBP</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Julia</span> just won a trade...</td>
+                                                <td><span class="currency">£ 353</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>GBP/JPY</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">George</span> just won a trade...</td>
+                                                <td><span class="currency">£ 540</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>GBP/AUD</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Kelsey</span> just won a trade...</td>
+                                                <td><span class="currency">£ 328</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>EUR/JPY</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">David</span> just won a trade...</td>
+                                                <td><span class="currency">£ 516</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>EUR/JPY</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Mohammed</span> just won a trade...</td>
+                                                <td><span class="currency">£ 397</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>USD/NZD</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">David</span> just won a trade...</td>
+                                                <td><span class="currency">£ 336</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>AUD/EUR</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Terry</span> just won a trade...</td>
+                                                <td><span class="currency">£ 357</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>USD/GBP</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Ruth</span> just won a trade...</td>
+                                                <td><span class="currency">£ 323</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>EUR/JPY</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Judy</span> just won a trade...</td>
+                                                <td><span class="currency">£ 352</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>USD/JPY</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Ronald</span> just won a trade...</td>
+                                                <td><span class="currency">£ 410</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>USD/NZD</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Rhonda</span> just won a trade...</td>
+                                                <td><span class="currency">£ 547</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>EUR/JPY</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Steven</span> just won a trade...</td>
+                                                <td><span class="currency">£ 226</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>USD/JPY</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Mark</span> just won a trade...</td>
+                                                <td><span class="currency">£ 359</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>USD/JPY</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Jeffery</span> just won a trade...</td>
+                                                <td><span class="currency">£ 254</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>EUR/AUD</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Inez</span> just won a trade...</td>
+                                                <td><span class="currency">£ 402</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>EUR/GBP</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">James</span> just won a trade...</td>
+                                                <td><span class="currency">£ 392</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>NZD/USD</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Leon</span> just won a trade...</td>
+                                                <td><span class="currency">£ 252</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>USD/EUR</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Leon</span> just won a trade...</td>
+                                                <td><span class="currency">£ 230</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>AUD/EUR</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Grace</span> just won a trade...</td>
+                                                <td><span class="currency">£ 397</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>USD/GBP</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Susan</span> just won a trade...</td>
+                                                <td><span class="currency">£ 265</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>EUR/GBP</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Mary</span> just won a trade...</td>
+                                                <td><span class="currency">£ 349</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>USD/GBP</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Grace</span> just won a trade...</td>
+                                                <td><span class="currency">£ 502</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>USD/GBP</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Jeanine</span> just won a trade...</td>
+                                                <td><span class="currency">£ 302</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>USD/GBP</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Holly</span> just won a trade...</td>
+                                                <td><span class="currency">£ 429</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>EUR/GBP</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Monty</span> just won a trade...</td>
+                                                <td><span class="currency">£ 479</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>GBP/JPY</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Crystal</span> just won a trade...</td>
+                                                <td><span class="currency">£ 492</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>GBP/AUD</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Hermine</span> just won a trade...</td>
+                                                <td><span class="currency">£ 546</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>GBP/JPY</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Inez</span> just won a trade...</td>
+                                                <td><span class="currency">£ 268</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>USD/NZD</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Lonnie</span> just won a trade...</td>
+                                                <td><span class="currency">£ 419</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>AUD/EUR</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Heather</span> just won a trade...</td>
+                                                <td><span class="currency">£ 491</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>USD/EUR</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Crystal</span> just won a trade...</td>
+                                                <td><span class="currency">£ 535</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>EUR/GBP</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Emery</span> just won a trade...</td>
+                                                <td><span class="currency">£ 356</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>EUR/JPY</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Mary</span> just won a trade...</td>
+                                                <td><span class="currency">£ 272</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>USD/NZD</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Tiffany</span> just won a trade...</td>
+                                                <td><span class="currency">£ 394</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>NZD/USD</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Mildred</span> just won a trade...</td>
+                                                <td><span class="currency">£ 354</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>GBP/JPY</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Frances</span> just won a trade...</td>
+                                                <td><span class="currency">£ 330</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>USD/EUR</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Charles</span> just won a trade...</td>
+                                                <td><span class="currency">£ 440</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>GBP/AUD</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Edwin</span> just won a trade...</td>
+                                                <td><span class="currency">£ 490</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>GBP/AUD</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Carol</span> just won a trade...</td>
+                                                <td><span class="currency">£ 252</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>USD/EUR</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Lonnie</span> just won a trade...</td>
+                                                <td><span class="currency">£ 522</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>EUR/JPY</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Daniel</span> just won a trade...</td>
+                                                <td><span class="currency">£ 497</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>USD/NZD</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">James</span> just won a trade...</td>
+                                                <td><span class="currency">£ 504</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>USD/NZD</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Melanie</span> just won a trade...</td>
+                                                <td><span class="currency">£ 549</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>USD/GBP</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                            <tr class="trow">
+                                                <td><span class="name">Jessie</span> just won a trade...</td>
+                                                <td><span class="currency">£ 442</span></td>
+                                                <td>11 June 2017 </td>
+                                                <td>USD/JPY</td>
+                                                <td><img src="img/bluetick.png" width="20" /></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <h2 id="faq">Frequently Asked Questions</h2>
+                            <div class="FAQ-pan">
+                                <div class="q-section active"> <img src="img/plus-icon.png" alt="">
+                                    <p>What is the Brit Method?</p>
+                                </div>
+                                <div style="display: block;" class="a-section">
+                                    <p>The Brit Method is a 100% FREE software that will trade on the binary options markets with just 1 click! It's fully automated and places the winning trades for you!</p>
+                                </div>
+                                <div class="q-section active"> <img src="img/plus-icon.png" alt="">
+                                    <p>How much money can I make with this software?</p>
+                                </div>
+                                <div style="display: block;" class="a-section">
+                                    <p>To put it in short, there's no limit. To put it more technically, it really depends on how much money you fund your account with. Most of our members fund their account with £300, and make about £800-1000 daily. Those who fund their account with £1,000 or over make over £2,500 per day!</p>
+                                </div>
+                                <div class="q-section active"> <img src="img/plus-icon.png" alt="">
+                                    <p>How long does each trade last?</p>
+                                </div>
+                                <div style="display: block;" class="a-section">
+                                    <p>Anywhere from a minute to an hour. So you will see your profits right away, no more waiting for long periods of time.</p>
+                                </div>
+                                <div class="q-section"> <img src="img/plus-icon.png" alt="">
+                                    <p>Do I need to use my credit card when I signup?</p>
+                                </div>
+                                <div style="display: block;" class="a-section">
+                                    <p><u><strong>NO WAY</strong></u>. The Brit Method App is 100% FREE. You will NOT be asked for your credit card or paypal or bank information when you download the Brit Method System!</p>
+                                    <p>&nbsp;</p>
+                                    <p>Once you are in the members area, we will recommend a binary options broker that you can exploit. For this, you'll need funds to deposit in order to start making profits. This is YOUR money that you are just depositing to trade with, and you can withdraw it at any time!</p>
+                                </div>
+                                <div class="q-section"> <img src="img/plus-icon.png" alt="">
+                                    <p>Does your software work with Mac computers? </p>
+                                </div>
+                                <div style="display: block;" class="a-section">
+                                    <p>Yes! It is a web based application which means it can be used on Windows, Mac or Linux based systems! You just need a web browser.</p>
+                                </div>
+                                <div class="q-section"> <img src="img/plus-icon.png" alt="">
+                                    <p>I don't have much free time - Is the Brit Method really automated?</p>
+                                </div>
+                                <div style="display: block;" class="a-section">
+                                    <p>YES! You simply click play in the software and it will trade for you! You can walk away from your computer, and enjoy your profits! You don't have to be anywhere near the software for it to work for you and make you thousands per day! </p>
+                                </div>
+                                <div class="q-section"> <img src="img/plus-icon.png" alt="">
+                                    <p>How easy is it to use the software?</p>
+                                </div>
+                                <div style="display: block;" class="a-section">
+                                    <p>VERY EASY! Once you sign up in the members area by filling in a simple form, the software is infront of you, click play, make profits! There is no complicated setup!</p>
+                                </div>
+                                <div class="q-section"> <img src="img/plus-icon.png" alt="">
+                                    <p>What about customer support?</p>
+                                </div>
+                                <div style="display: block;" class="a-section">
+                                    <p>Our customer support team operates 7 days per week - 24 hours a day. <strong>We have email support but more importantly we have a FULL live chat system in the members area with our support agents ready to help you at ANY time! 2am? NO PROBLEM!</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- header -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12"> Copyright 2015 Brit Method. All Right Reserved. </div>
+                </div>
+            </div>
+        </div>
+        <div style="background:#fff;" align="center"> <img class="impressum-img" style="display:none;margin:40px;" src="img/de/imp.jpg" alt="impressum" /> </div>
+        <script>
+            $('#impressum').click(function () {
+                $('.impressum-img').slideToggle();
+                $('html, body').animate({
+                    scrollTop: $('.impressum-img').offset().top
+                }, 500);
+            });
+        </script>
+    </div>
+    <!-- content -->
+    <div id="overlay" style="display:none;"></div>
+    <div id="modal" style="display:none;"> <i id="close-modal" class="fa fa-times"></i>
+        <table class="prize-table">
+            <tr>
+                <th>Current Time</th>
+                <th>Currency</th>
+                <th>Trade Type</th>
+                <th>Payout</th>
+                <th>Results</th>
+            </tr>
+            <tr>
+                <td>2017/06/10 21:15</td>
+                <td>NZD/USD</td>
+                <td>PUT</td>
+                <td><span class="prize-amount"><span class="prize-currency"></span> 490.00</span>
+                </td>
+                <td><img width="20" height="20" src="img/success.png" alt="" /></td>
+            </tr>
+            <tr>
+                <td>2017/06/10 20:43</td>
+                <td>NZD/CAD</td>
+                <td>CALL</td>
+                <td><span class="prize-amount"><span class="prize-currency"></span> 165.00</span>
+                </td>
+                <td><img width="20" height="20" src="img/success.png" alt="" /></td>
+            </tr>
+            <tr>
+                <td>2017/06/10 19:26</td>
+                <td>CHF/JPY</td>
+                <td>CALL</td>
+                <td><span class="prize-amount"><span class="prize-currency"></span> 546.00</span>
+                </td>
+                <td><img width="20" height="20" src="img/success.png" alt="" /></td>
+            </tr>
+            <tr>
+                <td>2017/06/10 17:05</td>
+                <td>EUR/GBP</td>
+                <td>PUT</td>
+                <td><span class="prize-amount"><span class="prize-currency"></span> 222.00</span>
+                </td>
+                <td><img width="20" height="20" src="img/success.png" alt="" /></td>
+            </tr>
+            <tr>
+                <td>2017/06/10 14:38</td>
+                <td>NZD/USD</td>
+                <td>PUT</td>
+                <td><span class="prize-amount"><span class="prize-currency"></span> 361.00</span>
+                </td>
+                <td><img width="20" height="20" src="img/success.png" alt="" /></td>
+            </tr>
+            <tr>
+                <td>2017/06/9 23:06</td>
+                <td>GBP/USD</td>
+                <td>CALL</td>
+                <td><span class="prize-amount"><span class="prize-currency"></span> 327.00</span>
+                </td>
+                <td><img width="20" height="20" src="img/success.png" alt="" /></td>
+            </tr>
+            <tr>
+                <td>2017/06/9 22:50</td>
+                <td>EUR/JPY</td>
+                <td>CALL</td>
+                <td><span class="prize-amount"><span class="prize-currency"></span> 373.00</span>
+                </td>
+                <td><img width="20" height="20" src="img/success.png" alt="" /></td>
+            </tr>
+            <tr>
+                <td>2017/06/9 22:17</td>
+                <td>USD/CHF</td>
+                <td>PUT</td>
+                <td><span class="prize-amount"><span class="prize-currency"></span> 478.00</span>
+                </td>
+                <td><img width="20" height="20" src="img/success.png" alt="" /></td>
+            </tr>
+            <tr>
+                <td>2017/06/9 21:35</td>
+                <td>GBP/USD</td>
+                <td>CALL</td>
+                <td><span class="prize-amount"><span class="prize-currency"></span> 431.00</span>
+                </td>
+                <td><img width="20" height="20" src="img/success.png" alt="" /></td>
+            </tr>
+            <tr>
+                <td>2017/06/9 21:22</td>
+                <td>USD/JPY</td>
+                <td>CALL</td>
+                <td><span class="prize-amount"><span class="prize-currency"></span> 222.00</span>
+                </td>
+                <td><img width="20" height="20" src="img/success.png" alt="" /></td>
+            </tr>
+            <tr>
+                <td>2017/06/9 20:44</td>
+                <td>USD/JPY</td>
+                <td>CALL</td>
+                <td><span class="prize-amount"><span class="prize-currency"></span> 138.00</span>
+                </td>
+                <td><img width="20" height="20" src="img/success.png" alt="" /></td>
+            </tr>
+        </table>
+    </div>
+    <form id="med_steve_form2" name="med_steve_form2" method="post" action="" accept-charset="UTF-8" style="display:none">
+        <input type="hidden" name="ID" value="01_dpl_leads" />
+        <input type="hidden" name="UID" value="ZjY" />
+        <input type="hidden" name="return" value="" />
+        <input type="hidden" name="confirm" value="" />
+        <input type="hidden" name="image" value="" />
+        <input type="hidden" name="imageconfirm" value="1">
+        <input type="text" name="email" id="med_steve_form2_email" value="" />
+        <input type="hidden" name="confirm" value="" /> </form>
+    <script type="text/javascript" src=""></script>
+</body>
+
+</html>
