@@ -10,11 +10,10 @@ class CardsStack extends React.Component {
                     justifyContent: 'space-around',
                     flexDirection: 'column',
                     display: 'flex',
-                    borderStyle: 'solid',
                     backgroundColor: 'rgba(255,255,255,0.05)',
                     overflow: 'hidden',
                     height: '550px',
-                    width: '1000px'
+                    width: '100%'
                 },
                 "data-tid": "2e2xiodmxmo"
             },
