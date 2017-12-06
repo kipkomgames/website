@@ -1,0 +1,159 @@
+/*********************
+Styles for form #1553
+*********************/
+
+.mc4wp-form-1553 label, 
+.mc4wp-form-1553 input, 
+.mc4wp-form-1553 textarea, 
+.mc4wp-form-1553 select, 
+.mc4wp-form-1553 button {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.mc4wp-form-1553 {
+	display: block;
+	text-align: center;
+	width: 100%; max-width: 580px !important;
+	background-repeat: repeat;
+}
+
+.mc4wp-form-1553 label {
+	vertical-align: top;
+	margin-bottom: 6px;
+	color: #000000;
+	font-size: 16px;
+	display: inline-block;
+	font-style: normal;
+	font-weight: bold;
+}
+
+.mc4wp-form-1553 label span { font-weight: initial; }
+
+.mc4wp-form-1553 input[type='text'],
+.mc4wp-form-1553 input[type='email'],
+.mc4wp-form-1553 input[type='url'],
+.mc4wp-form-1553 input[type='tel'],
+.mc4wp-form-1553 input[type='number'],
+.mc4wp-form-1553 input[type='date'],
+.mc4wp-form-1553 select,
+.mc4wp-form-1553 textarea {
+	vertical-align: top;
+	margin-bottom: 6px;
+	padding: 6px 12px;
+	width: 100%; max-width: 240px;
+	border-color: #8a54a2 !important;
+	border-width: 2px; border-style: solid;
+	display: inline-block;
+	height: 44px;
+}
+
+.mc4wp-form-1553 input[type='text']:focus,
+.mc4wp-form-1553 input[type='email']:focus,
+.mc4wp-form-1553 input[type='url']:focus,
+.mc4wp-form-1553 input[type='tel']:focus,
+.mc4wp-form-1553 input[type='number']:focus,
+.mc4wp-form-1553 input[type='date']:focus,
+.mc4wp-form-1553 select:focus,
+.mc4wp-form-1553 textarea:focus {
+	outline: 2px solid #8a54a2;
+}
+
+.mc4wp-form-1553 input[type='radio'],
+.mc4wp-form-1553 input[type='checkbox'] {
+	margin-right: 6px;
+	display: inline-block
+}
+
+.mc4wp-form-1553 input[type='submit'],
+.mc4wp-form-1553 input[type='button'],
+.mc4wp-form-1553 input[type='reset'],
+.mc4wp-form-1553 button {
+	vertical-align: top;
+	text-shadow: none;
+	padding: 6px 12px;
+	cursor: pointer;
+	text-align: center;
+	line-height: normal;
+	display: inline-block;
+	font-size: 14px !important;
+	height: 44px;
+}
+
+.mc4wp-form-1553 label {
+    line-height: 44px;
+}
+
+/*********************
+Styles for form #1446
+*********************/
+
+.mc4wp-form-1446 label, 
+.mc4wp-form-1446 input, 
+.mc4wp-form-1446 textarea, 
+.mc4wp-form-1446 select, 
+.mc4wp-form-1446 button {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.mc4wp-form-1446 {
+	display: block;
+	border-style: solid; border-width: 1px;
+	text-align: center;
+	background-repeat: repeat;
+}
+
+.mc4wp-form-1446 input[type='text'],
+.mc4wp-form-1446 input[type='email'],
+.mc4wp-form-1446 input[type='url'],
+.mc4wp-form-1446 input[type='tel'],
+.mc4wp-form-1446 input[type='number'],
+.mc4wp-form-1446 input[type='date'],
+.mc4wp-form-1446 select,
+.mc4wp-form-1446 textarea {
+	vertical-align: top;
+	margin-bottom: 6px;
+	padding: 6px 12px;
+	width: 100%; max-width: 300px;
+	display: inline-block;
+	height: 44px;
+}
+
+.mc4wp-form-1446 input[type='text']:focus,
+.mc4wp-form-1446 input[type='email']:focus,
+.mc4wp-form-1446 input[type='url']:focus,
+.mc4wp-form-1446 input[type='tel']:focus,
+.mc4wp-form-1446 input[type='number']:focus,
+.mc4wp-form-1446 input[type='date']:focus,
+.mc4wp-form-1446 select:focus,
+.mc4wp-form-1446 textarea:focus {
+	outline: 2px solid #8a54a2;
+}
+
+.mc4wp-form-1446 input[type='radio'],
+.mc4wp-form-1446 input[type='checkbox'] {
+	margin-right: 6px;
+	display: inline-block
+}
+
+.mc4wp-form-1446 input[type='submit'],
+.mc4wp-form-1446 input[type='button'],
+.mc4wp-form-1446 input[type='reset'],
+.mc4wp-form-1446 button {
+	vertical-align: top;
+	text-shadow: none;
+	padding: 6px 12px;
+	cursor: pointer;
+	text-align: center;
+	line-height: normal;
+	display: inline-block;
+	font-size: 14px !important;
+	width: 100%; max-width: 100px;
+	height: 44px;
+}
+
+
+

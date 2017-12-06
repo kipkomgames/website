@@ -1,0 +1,52 @@
+/*
+Author: Ortus IT Group
+Description: General file with CSS styles for Ultimate WP Counter
+Version: 2.1.7
+Website: http://www.OrtusIT.com
+*/
+
+.oWrapperRow {
+  text-align: center;
+}
+.oWrapperRow > div {
+  text-align: center;
+  vertical-align: middle;
+}
+.oWrapperRow > div.addcenter {
+  display: inline-block;
+  text-align: center;
+}
+.oWrapperRow > div a {
+  outline: 0;
+}
+body.noscroll {
+  overflow: hidden;
+  padding-right: 17px;
+}
+.defaultDecr {
+  border-radius: 5px;
+  border: 1px solid #000;
+  background-color: #fff;
+  color: #000;
+  margin: 1% auto;
+}
+.defaultDecr:hover {
+  border-radius: 5px;
+  border: 1px solid #888;
+  background-color: darkgrey;
+  color: #fff;
+  margin: 1% auto;
+}
+#wrap-demoImg {
+  display: block;
+  position: absolute;
+  z-index: 999999;
+  margin: auto;
+  top: -50000px;
+  left: 45%;
+}
+
+.votes-message{
+  position: relative;
+  top: 5px;
+}
