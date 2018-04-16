@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<!-- saved from url=(0237)https://online.bulbank.bg/page/default.aspx?user_id=887317&session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&xml_id=/en-US/01Info/04Accounts/01Balances/# -->
+<html xml:lang="en" lang="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.w3.org/1999/xhtml" class="k-webkit k-webkit65 gr__online_bulbank_bg"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Bulbank Online</title><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="Keywords" content="e,"><link type="text/css" rel="stylesheet" href="./Bulbank Online_files/default_20180130115337.AllInOne.css"><script type="text/javascript" src="./Bulbank Online_files/default_20180130115337.AllInOne.js">/**/</script><script type="text/javascript" src="./Bulbank Online_files/tinymce.min.js">/**/</script><script type="text/javascript" src="./Bulbank Online_files/tinymce.plugins.charactercount.js">/**/</script><script type="text/javascript" src="./Bulbank Online_files/strings-20180130115337en.AllInOne.js">/**/</script><script type="text/javascript">
+
+
+              $(document).ready(
+              function()
+              {
+              $('body').bind("AjaxRequestErrorLoginFail", function(e){AjaxRequestErrorLoginFail();});
+              $('body').bind("AjaxRequestErrorCertFail", function(e){AjaxRequestErrorCertFail();});
+              $('body').bind("AjaxRequestErrorLoginFailAdvSpl", function(e){AjaxRequestErrorLoginFailAdvSpl();});
+
+              }
+              );
+
+              $(document).ready(function() {
+              OnDocumentReadyActions();
+              });
+              
+              
+    var theme = "";
+    
+
+              function SaveAsFavouriteLink(favlinkurl)
+              {
+              ShowPleaseWaitDialog();
+
+              var ser = {
+              "svfvlnk": true,
+              "favlinkurl": favlinkurl
+              };
+
+              $.daisAjax({
+              cache: false,
+              type: "POST",
+              url: MakeRequestAndChangeXmlID("03MyBulBank/01Preferences/.save"),
+              data: ser,
+              dataType: "html",
+              success: onSuccessSave,
+              error: onErrorAJAX
+              });
+              }
+
+              function onSuccessSave(data)
+              {
+              if(g_sitePrefix == "/Individual")
+              {
+              var newUrl = MakeRequestAndChangeXmlID(".System/.UserPagelets");
+              LoadQuickLinks(newUrl);
+              }
+              HidePleaseWaitDialog();
+              }
+
+              function onErrorAJAX(data)
+              {
+              HidePleaseWaitDialog();
+              ShowGeneralError();
+              }
+            </script></head><!--[if lt IE 7]><body class="ie ie6 lte9 lte8 lte7 optional classes"><![endif]-->
+<!--[if IE 7]><body class="ie ie7 lte9 lte8 lte7 optional classes"><![endif]-->
+<!--[if IE 8]><body class="ie ie8 lte9 lte8 optional classes"><![endif]-->
+<!--[if IE 9]><body class="ie ie9 lte9 optional classes"><![endif]-->
+<!--[if gt IE 9]><body class="ie gt9 optional classes"><![endif]-->
+<!--[if !IE]><body class="optional classes"><![endif]--><body data-gr-c-s-loaded="true" cz-shortcut-listen="true"><div id="generalAJAXError" class="redtext ajaxError" style="display: none;">An error occurred while using the application. Please try again later.<br>&nbsp;<br><a href="javascript:void(0);" style="width:60px; text-align: center;float:right;" class="btn red" onclick="$(&#39;.ui-dialog-titlebar-close&#39;).trigger(&#39;click&#39;);"><span>close</span></a></div><form id="m_Form" name="m_Form" method="post" action="https://online.bulbank.bg/page/default.aspx?user_id=887317&amp;session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&amp;xml_id=/en-US/01Info/04Accounts/01Balances/"><div xmlns:xsd="http://www.w3.org/2001/XMLSchema" class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="sCWOwblnXhpetNm6pgH6xu8FFW0CxK67OuOuH8zr2SMCqO1zPmgjUZ24O4WwJASCaclyPFwpJF94uo5krlArCZvqD7mHMfMYy6PhHcd28LxT9Dpe">
+</div><div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="2B6AF03F">
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="">
+</div><div id="PleaseWaitDialog" class="text" style="text-align: center; width: auto; min-height: 104px; height: auto; display: none;" scrolltop="0" scrollleft="0">Please wait.<br><img src="./Bulbank Online_files/blank.gif" height="12" width="1"><br><img src="./Bulbank Online_files/loading.gif"></div><div id="AjaxRequestErrorLoginFail" class="text" style="text-align: center; display:none">Your session has expired. In order to continue using the application, you must login again.<br>&nbsp;<br><a style="width:50px; text-align: center;float:right;" class="btn red" href="https://online.bulbank.bg/page/default.aspx?xml_id=/en-US/.loginAll"><span>Login</span></a></div><div id="AjaxRequestErrorCertFail" class="text" style="text-align: center; display:none">Client certificate is required. Digital certificate or qualified electronic signature is required when aiming to order active transactions through the service Bulbank Online. You do not use client’s certificate in this session.<br>&nbsp;<br><a href="javascript:void(0);" style="width:60px; text-align: center;float:right;" class="btn red" onclick="$(&#39;.ui-dialog-titlebar-close&#39;).trigger(&#39;click&#39;);"><span>close</span></a></div><div id="AjaxRequestErrorLoginFailAdvSpl" class="text" style="text-align: center; display:none">Your session has expired. In order to continue using the Supplier Finance menu, you must identify again.<br>&nbsp;<br><a style="width:50px; text-align: center;float:right;" class="btn red" onclick="MakeRequestAndAppendXmlID_NormalSubmitTurbo(&#39;&#39;)" href="javascript:void(0);"><span>Login</span></a></div><div id="AjaxRequestError" style="display: none;">error</div><script type="text/html" id="AjaxRequestErrorTemplate"><div style="margin-left: 10px; overflow: auto; max-height: 400px;"><p>Sorry, but an error has been occurred during the processing of required site. The error is registered.</p>
+                  {{each(index, value) Messages}}
+                  {{html value}}
+                  {{/each}}
+                </div><br><a href="javascript:void(0);" style="width:60px; text-align: center;float:right;" class="btn red" onclick="$('.ui-dialog-titlebar-close').trigger('click');"><span>close</span></a></script><script type="text/javascript">
+                
+                $(function() {
+                
+                checkPolicyCookie();
+                
+                $('body').bind("AjaxRequestError", function(e, data){
+                var div = $('#AjaxRequestError').empty();
+                $("#AjaxRequestErrorTemplate").tmpl(data).appendTo(div);
+                div.dialog({
+                modal: true,
+                closeOnEscape: false,
+                title: STR_ERROR,
+                bgiframe: true,
+                open: function (event, ui) { $(".ui-dialog-titlebar-close").hide(); },
+                close: function () {
+                div.empty();
+                }
+                });
+                });
+                });
+                
+              </script><div id="cookiesPrivacy" style=""><div id="cookieInnerWrapper"><img class="notificationCookieImg" src="./Bulbank Online_files/i-icon.jpg"><div class="cookiesText"><p>This site uses cookies to improve its efficiency. By continuing to browse the site, you are agreeing to our <a href="https://www.unicreditbulbank.bg/en/legal-information/cookies-policy/" target="_blank">use of cookies</a>.</p></div><a href="https://online.bulbank.bg/page/default.aspx?user_id=887317&amp;session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&amp;xml_id=/en-US/01Info/04Accounts/01Balances/#" class="cookiesCloseBtn"><img class="closeCookieImg" src="./Bulbank Online_files/close-icon.png"></a></div></div><header id="header"><nav id="service-area"><control hasspecificlocation="true" id="UpMenu" ctype="Control">
+<div class="text">
+    <div class="servAreaWrap">
+        <ul id="servArea">
+            
+            <li>
+                
+                <a class="redLink" href="https://online.bulbank.bg/page/?user_id=887317&amp;session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&amp;xml_id=/en-US/.loginAll">
+                    Logout
+                </a>
+                
+            </li>
+            <li><a href="https://online.bulbank.bg/page/?user_id=887317&amp;session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&amp;xml_id=/en-US/.home">
+                 Home
+            </a></li>
+            
+
+            <li style="margin-right: 10px;">
+           
+                     <a href="https://online.bulbank.bg/page/?user_id=887317&amp;session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&amp;xml_id=/en-US/.06Feedback/.UserFeedback">
+                    Share with us
+                    </a>
+            
+            </li>
+
+            <li><a href="https://online.bulbank.bg/page/?user_id=887317&amp;session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&amp;xml_id=/en-US/.UserGuides">
+                User Guides
+            </a></li>
+            <li><a href="https://online.bulbank.bg/page/?user_id=887317&amp;session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&amp;xml_id=/en-US/.05Contacts/">
+                 Contacts
+            </a></li>
+            <li>
+                
+                    <a href="https://online.bulbank.bg/Individual/page/?user_id=887317&amp;session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&amp;xml_id=/en-US/.login">
+                        To Individual customers
+                    </a>
+                    
+            </li>  
+             <li style="margin-right: 10px;">
+                
+                <a class="redLink" href="https://online.bulbank.bg/page/?user_id=887317&amp;session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&amp;xml_id=/bg-BG/.home">
+                    Български
+                </a>
+                
+            </li>
+        </ul>
+    </div>
+</div>
+</control></nav><div class="logo"><img src="./Bulbank Online_files/giflogo.gif" alt="BulBank UniCredit Group"></div><control hasspecificlocation="true" id="Welcome" ctype="Control">
+<script type="text/javascript">
+    var isUserLogIn = false;
+    var isUserLogInTmp = 'True'; 
+   if(isUserLogInTmp == 'True' || isUserLogInTmp == 'true')
+   {
+       isUserLogIn = true;
+   }
+
+   $(function () {
+       $('p.msg img').hover(function () {
+           this.src = '/images/new/icons/mail-open.png';
+       }, function () {
+           this.src = '/images/new/icons/mail.png';
+       });
+
+       if(isUserLogIn)
+       {
+           DAIS.APERSON.SECURITY.SessionCountdown.setSessionChecker('600');
+}
+
+});
+
+var g_UserHasCertInSSL = false;
+    var g_sitePrefix = '/';
+</script>
+<div class="welcome-control">
+    <div id="pigeonDespatches">
+    <a class="despatchCenter" data-count-read="0" data-count-unread="0"><img src="./Bulbank Online_files/bellring.png" alt="0 unread"><span class="badge hidden">0</span></a><div class="centerList" style=""><p>No notifications have been received</p></div>
+</div><div id="welcome">
+        <p class="user"><img src="./Bulbank Online_files/user_red.png" alt=""> GUY SHIMONI</p><p class="msg"><a href="https://online.bulbank.bg/page/?session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&amp;user_id=887317&amp;xml_id=/en-US/03MyBulBank/17MyMessages/"><img src="./Bulbank Online_files/mail.png" alt=""></a>You do not have any new messages.</p><p class="msg"><a href="https://online.bulbank.bg/page/?session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&amp;user_id=887317&amp;xml_id=/en-US/03MyBulBank/03UserInfo/.ask_password_change"> Change your password</a></p><p class="msg" style="display:none" id="SessionCountdown">Session expires in <span id="SessionCountdownExpiredInMinutes"></span> mins.</p>&nbsp;
+    </div>
+</div>
+</control></header><nav id="horizontal"><ul id="navigTop" class="clearfix"><li id="homeLink"><a href="https://online.bulbank.bg/page/default.aspx?user_id=887317&amp;session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&amp;xml_id=/en-US/.home" alt="Home">
+				&nbsp;</a></li><li><a class="selected" href="https://online.bulbank.bg/page/default.aspx?user_id=887317&amp;session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&amp;xml_id=/en-US/01Info/"><span><span class="middle">Information</span></span></a></li><li><a href="https://online.bulbank.bg/page/default.aspx?user_id=887317&amp;session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&amp;xml_id=/en-US/02Services/"><span><span class="middle">Transactions</span></span></a></li><li><a href="https://online.bulbank.bg/page/default.aspx?user_id=887317&amp;session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&amp;xml_id=/en-US/04CorporateServices/"><span><span class="middle">Corporate services</span></span></a></li><li><a href="https://online.bulbank.bg/page/default.aspx?user_id=887317&amp;session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&amp;xml_id=/en-US/03MyBulBank/"><span><span class="middle">Settings</span></span></a></li><li><a href="https://online.bulbank.bg/page/default.aspx?user_id=887317&amp;session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&amp;xml_id=/en-US/04Support/"><span><span class="middle">Support</span></span></a></li><li><a href="https://online.bulbank.bg/page/default.aspx?user_id=887317&amp;session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&amp;xml_id=/en-US/05Survey/"><span><span class="middle">Customer feedback</span></span></a></li></ul></nav><div id="content-wrap"><nav id="left"><table cellspacing="0" cellpadding="0" border="0" width="171px"><tbody><tr valign="top"><td width="146px" style="vertical-align:top; height:640px"><table cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr class="mainmenu2a"><td align="left" style="
+						padding-left:11px
+					"><a href="https://online.bulbank.bg/page/default.aspx?user_id=887317&amp;session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&amp;xml_id=/en-US/01Info/04Accounts/">Bank accounts</a></td></tr><tr class="mainmenu2b"><td align="left" style="padding-left:22px"><a href="https://online.bulbank.bg/page/default.aspx?user_id=887317&amp;session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&amp;xml_id=/en-US/01Info/04Accounts/01Balances/">Balances</a></td></tr><tr class="mainmenu2d"><td align="left" style="
+						padding-left:33px
+					"><a href="https://online.bulbank.bg/page/default.aspx?user_id=887317&amp;session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&amp;xml_id=/en-US/01Info/04Accounts/01Balances/02AgrBalances/">Aggregated balances</a></td></tr><tr class="mainmenu2d"><td align="left" style="
+						padding-left:22px
+					"><a href="https://online.bulbank.bg/page/default.aspx?user_id=887317&amp;session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&amp;xml_id=/en-US/01Info/04Accounts/04Movements/">Movements</a></td></tr><tr class="mainmenu2d"><td align="left" style="
+						padding-left:22px
+					"><a href="https://online.bulbank.bg/page/default.aspx?user_id=887317&amp;session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&amp;xml_id=/en-US/01Info/04Accounts/05Turnover/">Turnovers</a></td></tr><tr class="mainmenu2d"><td align="left" style="
+						padding-left:22px
+					"><a href="https://online.bulbank.bg/page/default.aspx?user_id=887317&amp;session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&amp;xml_id=/en-US/01Info/04Accounts/06PDFStatements/">PDF Statements</a></td></tr><tr><td colspan="5" bgcolor="#EFEFEF" width="100%" style="font-size: 1px;height: 1px;line-height: 0;padding: 0;"><img src="./Bulbank Online_files/blank.gif" alt="" height="1" width="1"></td></tr><tr class="mainmenu2c"><td align="left" style="
+						padding-left:11px
+					"><a href="https://online.bulbank.bg/page/default.aspx?user_id=887317&amp;session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&amp;xml_id=/en-US/01Info/04Cards/">Credit Cards</a></td></tr><tr><td colspan="5" bgcolor="#EFEFEF" width="100%" style="font-size: 1px;height: 1px;line-height: 0;padding: 0;"><img src="./Bulbank Online_files/blank.gif" alt="" height="1" width="1"></td></tr><tr class="mainmenu2c"><td align="left" style="
+						padding-left:11px
+					"><a href="https://online.bulbank.bg/page/default.aspx?user_id=887317&amp;session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&amp;xml_id=/en-US/01Info/05Currency/">Finance</a></td></tr><tr><td colspan="5" bgcolor="#EFEFEF" width="100%" style="font-size: 1px;height: 1px;line-height: 0;padding: 0;"><img src="./Bulbank Online_files/blank.gif" alt="" height="1" width="1"></td></tr><tr class="mainmenu2c"><td align="left" style="
+						padding-left:11px
+					"><a href="https://online.bulbank.bg/page/default.aspx?user_id=887317&amp;session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&amp;xml_id=/en-US/01Info/06Deposits/">Deposits</a></td></tr><tr><td colspan="5" bgcolor="#EFEFEF" width="100%" style="font-size: 1px;height: 1px;line-height: 0;padding: 0;"><img src="./Bulbank Online_files/blank.gif" alt="" height="1" width="1"></td></tr><tr class="mainmenu2c"><td align="left" style="
+						padding-left:11px
+					"><a href="https://online.bulbank.bg/page/default.aspx?user_id=887317&amp;session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&amp;xml_id=/en-US/01Info/06Loans/">Loans</a></td></tr><tr><td colspan="5" bgcolor="#EFEFEF" width="100%" style="font-size: 1px;height: 1px;line-height: 0;padding: 0;"><img src="./Bulbank Online_files/blank.gif" alt="" height="1" width="1"></td></tr><tr class="mainmenu2c"><td align="left" style="
+						padding-left:11px
+					"><a href="https://online.bulbank.bg/page/default.aspx?user_id=887317&amp;session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&amp;xml_id=/en-US/01Info/07SwiftNotifications/">SWIFT/SEPA Notifications</a></td></tr><tr><td colspan="5" bgcolor="#EFEFEF" width="100%" style="font-size: 1px;height: 1px;line-height: 0;padding: 0;"><img src="./Bulbank Online_files/blank.gif" alt="" height="1" width="1"></td></tr><tr class="mainmenu2c"><td align="left" style="
+						padding-left:11px
+					"><a href="https://online.bulbank.bg/page/default.aspx?user_id=887317&amp;session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&amp;xml_id=/en-US/01Info/08Loyalty/">Program "PLUS"</a></td></tr><tr><td colspan="5" bgcolor="#EFEFEF" width="100%" style="font-size: 1px;height: 1px;line-height: 0;padding: 0;"><img src="./Bulbank Online_files/blank.gif" alt="" height="1" width="1"></td></tr><tr class="mainmenu2c"><td align="left" style="
+						padding-left:11px
+					"><a href="https://online.bulbank.bg/page/default.aspx?user_id=887317&amp;session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&amp;xml_id=/en-US/01Info/20News/">News</a></td></tr><tr><td colspan="5" bgcolor="#EFEFEF" width="100%" style="font-size: 1px;height: 1px;line-height: 0;padding: 0;"><img src="./Bulbank Online_files/blank.gif" alt="" height="1" width="0"></td></tr><tr><td colspan="5"><control isplacedleft="true" id="WelcomeCertWarning" ctype="Control">
+<div style="display:">
+
+
+<br>
+<table cellspacing="0" cellpadding="0" border="0" width="171px">
+	<tbody><tr valign="top">		
+		<td>
+			<div class="pagelet">
+                <section> 
+                    <span id="WelcomeCertWarning_m_ctrl_span" class="redtext" style="width:100%; text-align:center;">You don't have a certificate.</span>
+                    <span id="WelcomeCertWarning_m_ctrl_link" class="text" style="width:100%; text-align:center;"><br>
+                        If you want to get a certificate from Bulbank or register certificate from other Certification Authority, please go to 
+                        <a href="https://online.bulbank.bg/page/?user_id=887317&amp;session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&amp;xml_id=/en-US/03MyBulBank/03UserInfo/01_Certificates/" class="link">
+                            Certificates
+                        </a>
+                         page and follow instructions on the page.
+                        <br>
+                    </span>
+                    <span id="WelcomeCertWarning_m_ctrl_space" class="text" style="width:100%; text-align:center;"></span>
+                </section>
+            </div>
+		</td>	
+	</tr>	
+</tbody></table>
+
+
+</div>
+
+</control><control isplacedleft="true" id="ProcurationWarning" ctype="Control">
+<div style="display:none">
+  <br>
+    <table cellspacing="0" cellpadding="0" border="0" width="171px">
+	    <tbody><tr valign="top">		
+		    <td>
+			    <div class="pagelet">
+                    <section> 
+                        <span id="ProcurationWarning_m_ctrl_span" class="redtext" style="width:100%; text-align:center;"></span>
+                        
+                    </section>
+                </div>
+		    </td>	
+	    </tr>	
+    </tbody></table>
+</div>
+
+</control></td></tr></tbody></table></td><td width="25px"><img src="./Bulbank Online_files/blank.gif" alt="" height="1" width="1"></td></tr></tbody></table><control isplacedleft="true" id="DespatchCenterBase" ctype="MvcControl">
+
+<script type="text/javascript">
+    LoadDespatchCenterSliders($('#pigeonDespatches'));
+</script>
+</control></nav><div id="content" class="middle-width"><section><h1>Balances</h1></section><section><control>
+<script type="text/javascript">
+
+    //
+    function OnChangeSearchType(tp) {
+        if ($get("iSearchType").value !== tp) {
+
+            //set account selected values
+            selBA = $('#acc').val();
+            selBC = $('#bcl').val();
+
+            //set new search type
+            $get("iSearchType").value = tp;
+            $get("iDontSearch").value = "iDontSearch";
+
+            var ser = $("form").serialize();
+            var newUrl = MakeRequestAndChangeXmlID("01Info/04Accounts/01Balances/");
+
+            HideGeneralError();
+            ShowPleaseWaitDialog();
+
+            $.daisAjax({
+                cache: false,
+                type: "POST",
+                url: newUrl,
+                data: ser,
+                dataType: "html",
+                success: onSuccessChangeSearchType,
+                error: onErrorAJAX
+            });
+        }
+    }
+
+    function onErrorAJAX(data) {
+        HidePleaseWaitDialog();
+
+        //        alert(STR_AJAX_ERROR);
+        ShowGeneralError();
+    }
+
+    function onSuccessChangeSearchType(data) {
+        var content = $(data).find("#divSearchContent");
+        $("#divSearchContent").html(content);
+
+        //call load event
+        onAnyLoad();
+
+        MovePaging(data);
+
+        SetDefaultSearchResultsCount();
+
+        HidePleaseWaitDialog();
+
+        AddClickTracking();
+    }
+
+    function SubmitAJAX() {
+
+     var res = CheckValues();
+     if (res) {
+
+         var ser = $("form").serialize();
+         var newUrl = window.location.href; //document.forms[0].action;
+
+         HideGeneralError();
+         ShowPleaseWaitDialog();
+
+         $.daisAjax({
+             cache: false,
+             type: "POST",
+             url: newUrl,
+             data: ser,
+             dataType: "html",
+             success: onSuccessSubmitAJAX,
+             error: onErrorAJAX
+         });
+     }
+
+        return false;
+    }
+
+    function onSuccessSubmitAJAX(data) {
+
+        var content = $(data).find("#divAPABalances");
+        $("#divAPABalances").html(content);
+
+        if (typeof SetClickActionToTablesWithDetailsBalances == 'function')
+            SetClickActionToTablesWithDetailsBalances(); 
+
+        MovePaging(data);
+
+        HidePleaseWaitDialog();
+    }
+
+    function CheckValues() {
+        var v_year = document.forms[0].ArchiveYear;
+        if (v_year == null)
+            return true;
+
+        var d_max = "2011" + "0101";
+        var v_m_at = document.forms[0].m_at;
+        var v_m_from = document.forms[0].m_from;
+        var v_m_to = document.forms[0].m_to;
+
+        var v_gen_type = document.forms[0].gen_type;
+        if (!IsArchive()) {
+            if (v_m_at.disabled == false) // gen_type_Date 
+            {
+                var d_at = Obj2StrDate(v_m_at);
+                if (!dateCompare(d_max, d_at)) {
+                    alert("Attention: the period you have chosen contains balances which are in archive. If you want to see them, please choose archive year. ");
+                    return false;
+                }
+                else {
+                    return true;
+                }
+            }
+
+            var v_m_from = document.forms[0].m_from;
+            var v_m_to = document.forms[0].m_to;
+
+            if (v_m_from.disabled == false) //gen_type_Period
+            {
+                var d_from = Obj2StrDate(v_m_from);
+                var d_to = Obj2StrDate(v_m_to);
+
+                if (!dateCompare(d_max, d_from)) {
+                    alert("Attention: the period you have chosen contains balances which are in archive. If you want to see them, please choose archive year. ");
+                    return false;
+                }
+                else if (!dateCompare(d_max, d_to)) {
+                    alert("Attention: the period you have chosen contains balances which are in archive. If you want to see them, please choose archive year. ");
+                    return false;
+                }
+                else {
+                    return true;
+                }
+            }
+            return true;
+        }
+        else {
+            var d_archive_start = v_year.value + "0101";
+            var d_archive_end = v_year.value + "1231";
+
+            if (v_m_at.disabled == false) // gen_type_Date
+            {
+                var d_at = Obj2StrDate(v_m_at);
+                if (!dateCompare(d_archive_start, d_at)) {
+                    alert("Attention: The date you have selected is not in the archive for the selected year. Please change your search criteria.");
+                    return false;
+                }
+                else if (!dateCompare(d_at, d_archive_end)) {
+                    alert("Attention: The date you have selected is not in the archive for the selected year. Please change your search criteria.");
+                    return false;
+                }
+                else {
+                    return true;
+                }
+            }
+
+            if (v_m_from.disabled == false) //gen_type_Period
+            {
+                var d_from = Obj2StrDate(v_m_from);
+                var d_to = Obj2StrDate(v_m_to);
+
+                if (!dateCompare(d_archive_start, d_from)) {
+                    alert("Attention: The period you have selected is not in the archive for the selected year. Please change your search criteria.");
+                    return false;
+                }
+                else if (!dateCompare(d_from, d_archive_end)) {
+                    alert("Attention: The period you have selected is not in the archive for the selected year. Please change your search criteria.");
+                    return false;
+                }
+                else if (!dateCompare(d_archive_start, d_to)) {
+                    alert("Attention: The period you have selected is not in the archive for the selected year. Please change your search criteria.");
+                    return false;
+                }
+                else if (!dateCompare(d_to, d_archive_end)) {
+                    alert("Attention: The period you have selected is not in the archive for the selected year. Please change your search criteria.");
+                    return false;
+                }
+                else {
+                    return true;
+                }
+            }
+        }
+        return true;
+    }
+    function Obj2StrDate(obj) {
+        return obj.value.slice(6, 10) + obj.value.slice(3, 5) + obj.value.slice(0, 2);
+    }
+
+    function SetDate(obj, d_date) {
+        obj.value = d_date;
+    }
+
+    function IsArchive() {
+        var v_year = document.forms[0].ArchiveYear;
+        if (v_year == null)
+            return false;
+
+        if (v_year.value == "255")
+            return false;
+        return true;
+    }
+
+    function ArchiveActivated() {
+        if (!IsArchive()) {
+            
+            var today = "16.04.2018";
+            SetDate(document.forms[0].m_at, today);
+            SetDate(document.forms[0].m_from, today);
+            SetDate(document.forms[0].m_to, today);
+            return true;
+        }
+
+        var v_year = document.forms[0].ArchiveYear;
+        var x = document.getElementsByName("gen_type");
+        var i = 0;
+        for (i = 0; LesThen(i, x.length); i++) {
+            if (x[i].checked == true)
+                break;
+        }
+
+        if (x[i].value == "gen_type_Date") {
+            SetDate(document.forms[0].m_at, "31.12." + v_year.value);
+        }
+        else if (x[i].value == "gen_type_Period") {
+            SetDate(document.forms[0].m_from, "01.01." + v_year.value);
+            SetDate(document.forms[0].m_to, "31.12." + v_year.value);
+        }
+        
+        return true;
+    }
+
+	
+</script>
+<script type="text/javascript">
+
+
+    $(document).ready(function () {
+        onAnyLoad();
+
+        InitialMovePaging();
+    });
+
+    function MovePaging(data) {
+        if (document.forms[0].iSearchType.value == "basic") {
+            MovePaging_Basic(data);
+        }
+        else {
+            MovePaging_Advanced(data);
+        }
+    }
+
+    function MovePaging_Advanced(data) {
+        $('#PagingHolder').empty();
+
+        var content = $(data).find("#footerPagingPlaceHolder").html();
+
+        $("#PagingHolder").html(content);
+
+        content = $(data).find("#divallpages").html();
+
+        $("#PagingHolder").append(content);
+
+        //fix links in paging
+        //var allPageLinks = $('#divallpages a');
+        var allPageLinks = $('#PagingHolder a');
+        for (i = 0; LesThen(i, allPageLinks.length); i++) {
+            allPageLinks[i].href = allPageLinks[i].href.replace("document.forms[0].submit();", "void(SubmitAJAX());");
+        }
+
+        $('#divallpages').detach();
+        $('#footerPagingPlaceHolder').detach();
+
+        //$('#user_res_for_page').val('10');
+        document.getElementById('PagingHolder').style.display = "block";
+    }
+
+    function MovePaging_Basic(data) {
+        $('#PagingHolder').empty();
+
+        var content = $(data).find("#footerPagingPlaceHolder").html();
+
+        $("#PagingHolder").html(content);
+
+        content = $(data).find("#divallpages").html();
+
+        $("#PagingHolder").append(content);
+
+        //fix links in paging
+        //var allPageLinks = $('#divallpages a');
+        var allPageLinks = $('#PagingHolder a');
+        for (i = 0; LesThen(i, allPageLinks.length); i++) {
+            allPageLinks[i].href = allPageLinks[i].href.replace("document.forms[0].submit();", "void(SubmitAJAX());");
+        }
+
+        $('#divallpages').detach();
+        $('#footerPagingPlaceHolder').detach();
+
+        $('#user_res_for_page').val('-1');
+        document.getElementById('PagingHolder').style.display = "none";
+    }
+
+    function InitialMovePaging() {
+        if (document.forms[0].iSearchType.value == "basic") {
+            InitialMovePaging_Basic();
+        }
+        else {
+            InitialMovePaging_Advanced();
+        }
+    }
+
+    function InitialMovePaging_Advanced() {
+        $('#PagingHolder').empty();
+        $('#footerPagingPlaceHolder').detach().appendTo('#PagingHolder');
+        $('#divallpages').detach().appendTo('#PagingHolder');
+
+        $('#user_res_for_page').val('10');
+        document.getElementById('PagingHolder').style.display = "block";
+    }
+
+    function InitialMovePaging_Basic() {
+        $('#PagingHolder').empty();
+        $('#footerPagingPlaceHolder').detach().appendTo('#PagingHolder');
+        $('#divallpages').detach().appendTo('#PagingHolder');
+
+        $('#user_res_for_page').val('-1');
+        document.getElementById('PagingHolder').style.display = "none";
+    }
+
+    function onAnyLoad() {
+        //account list load function
+        FillConnectedSelects();
+        DisableSomeHeaders_Account_Balances_Filter($('input[name=gen_type]:checked')[0]);
+    }
+
+    function DisableSomeHeaders_Account_Balances_Filter1(obj) {
+        DisableSomeHeaders_Account_Balances_Filter(obj);
+        ArchiveActivated();
+
+    }
+
+    function DisableSomeHeaders_Account_Balances_Filter(obj) {
+        if (document.forms[0].iSearchType.value == "basic") {
+            return DisableSomeHeaders_Account_Balances_Filter_Basic(obj);
+        }
+        else {
+            return DisableSomeHeaders_Account_Balances_Filter_Advanced(obj);
+        }
+    }
+
+    function DisableSomeHeaders_Account_Balances_Filter_Basic(obj) {
+        var v_m_periodweeks = document.forms[0].m_periodweeks;
+        var v_m_from = document.forms[0].m_from;
+        var v_m_to = document.forms[0].m_to;
+
+		var obj_value = (obj!=null ? obj.value : "" );
+
+        if (obj_value == null || obj_value == "") {
+            obj_value = "gen_type_Current";
+        }
+
+        switch (obj_value) {
+            case "gen_type_Current":
+
+                v_m_periodweeks.disabled = true;
+
+                break;
+            case "gen_type_Period":
+
+                v_m_periodweeks.disabled = false;
+
+                break;
+        }
+
+        return true;
+    }
+
+    function DisableSomeHeaders_Account_Balances_Filter_Advanced(obj) {
+        var v_m_at = document.forms[0].m_at;
+        var v_m_from = document.forms[0].m_from;
+        var v_m_to = document.forms[0].m_to;
+
+		var obj_value = (obj!=null ? obj.value : "" );
+
+        if (obj_value == null || obj_value == "") {
+            obj_value = "gen_type_Current";
+        }
+
+        var v_year = $('#ArchiveYear');
+
+        switch (obj_value) {
+            case "gen_type_Date":
+
+                v_m_at.disabled = false;
+                v_m_from.disabled = true;
+                v_m_to.disabled = true;
+                if (v_year != null) {
+                    v_year.prop('disabled', false);
+                }
+
+                break;
+            case "gen_type_Current":
+
+                v_m_at.disabled = true;
+                v_m_from.disabled = true;
+                v_m_to.disabled = true;
+                if (v_year != null) {
+                    v_year.prop('disabled', true);
+                    v_year.val('255');
+
+                }
+
+                break;
+            case "gen_type_Period":
+
+                v_m_at.disabled = true;
+                v_m_from.disabled = false;
+                v_m_to.disabled = false;
+                if (v_year != null) {
+                    v_year.prop('disabled', false);
+                }
+
+                break;
+        }
+
+        return true;
+    }
+
+    function ChangePeriodType() {
+        if (document.forms[0].iSearchType.value == "basic") {
+            ChangePeriodType_Basic();
+        }
+        else {
+            ChangePeriodType_Advanced();
+        }
+    }
+
+    function ChangePeriodType_Advanced() {
+    }
+
+    function ChangePeriodType_Basic() {
+        var v_m_periodweeks = document.forms[0].m_periodweeks;
+        var v_m_from = document.forms[0].m_from;
+        var v_m_to = document.forms[0].m_to;
+
+        var myDate = new Date();
+        v_m_to.value = dateFormat_ddMMyyyy(myDate);
+        if (v_m_periodweeks.value == 4) {
+            myDate = addMonths(myDate, -1);
+        }
+        else {
+            myDate.setDate(myDate.getDate() - 7 * v_m_periodweeks.value);
+        }
+        v_m_from.value = dateFormat_ddMMyyyy(myDate);
+    }
+
+    function ClearForm() {
+        g_bNeedToConfirmOnUnload = false;
+
+        if (document.forms[0].iSearchType.value == "basic") {
+            ClearForm_Basic();
+        }
+        else {
+            ClearForm_Advanced();
+        }
+        DisableSomeHeaders_Account_Balances_Filter($('input[name=gen_type]:checked')[0]);       
+    }
+
+    function ClearForm_Advanced() {
+        ClearConnectedSelects();
+        $('#gen_type_Current').attr('checked', true);
+        $('#gen_type_Period').attr('checked', false);
+        $('#gen_type_Date').attr('checked', false);
+        $('#m_at').val(GetCurrentDate());
+        $('#m_from').val(GetCurrentDate());
+        $('#m_to').val(GetCurrentDate());
+        $('#ShowTTO').attr('checked', false);
+        $('#ShowDTO').attr('checked', false);
+        $('#BCLPrefVal').attr('checked', false);
+        $('#user_res_for_page').val('10');
+    }
+
+    function ClearForm_Basic() {
+        ClearConnectedSelects();
+        $('#gen_type_Current').attr('checked', true);
+        $('#gen_type_Period').attr('checked', false);
+        $('#m_from').val('');
+        $('#m_to').val('');
+        $('#m_periodweeks').val('0');
+        $('#BCLPrefVal').attr('checked', false);
+        $('#user_res_for_page').val('-1');
+    }
+
+    function SetDefaultSearchResultsCount() {
+        if (document.forms[0].iSearchType.value == "basic") {
+            SetDefaultSearchResultsCount_Basic();
+        }
+        else {
+            SetDefaultSearchResultsCount_Advanced();
+        }
+    }
+
+    function SetDefaultSearchResultsCount_Advanced() {
+        $('#user_res_for_page').val('10');
+    }
+
+    function SetDefaultSearchResultsCount_Basic() {
+    }
+
+    function MyCheck() {
+        if (document.forms[0].iSearchType.value == "basic") {
+            MyCheck_Basic();
+        }
+        else {
+            MyCheck_Advanced();
+        }
+    }
+
+    function MyCheck_Advanced() {
+        alert("advanced func");
+    }
+
+    function MyCheck_Basic() {
+        alert("basic func");
+    }
+
+		
+	
+</script>
+<div id="divSearchContent"><div id="divSearchContent">
+    <input type="hidden" id="iDontSearch" name="iDontSearch">
+    <input type="hidden" id="iSearchType" name="iSearchType" value="basic">
+    <div id="divSearchMenu" class="horizontal" style="width: 775px;">
+        
+        <ul class="navigTop">
+            <li><a class="selected" href="https://online.bulbank.bg/page/default.aspx?user_id=887317&amp;session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&amp;xml_id=/en-US/01Info/04Accounts/01Balances/#" onclick="OnChangeSearchType(&#39;basic&#39;)" button-tracking="true" trackingid="BalanceSearchBasic">
+                <span><span class="middle">
+                    Search</span></span></a>
+            </li>
+            <li><a href="https://online.bulbank.bg/page/default.aspx?user_id=887317&amp;session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&amp;xml_id=/en-US/01Info/04Accounts/01Balances/#" onclick="OnChangeSearchType(&#39;advanced&#39;)" button-tracking="true" trackingid="BalanceSearchAdvanced">
+                <span><span class="middle">
+                    Advanced search</span></span></a>
+            </li>
+        </ul>
+    </div>
+    
+
+<div class="filter-form" style="height:85px;">
+
+
+
+
+<label class="row1">
+Client
+</label>		
+
+<select id="bcl" name="bcl" class="select row1" style="width:220px; left:80px;"><option selected="true" value="f299012621" title="ГТНП ООД">ГТНП ООД</option></select>
+
+<label class="row2">	
+Account
+</label>
+<select id="acc" name="acc" class="select row2" style="width:220px; left:80px;"><option selected="true" value="74a46c99cc7e42508fd8bf6cd3917931">1523194179EUR</option></select>
+
+
+
+
+
+<input type="radio" id="gen_type_Period" value="gen_type_Period" name="gen_type" class="row1" onclick="DisableSomeHeaders_Account_Balances_Filter(this)" style="left:340px;">
+<label for="gen_type_Period" class="row1" style="left:360px">
+    Period
+</label>
+<select class="input row1 valid" id="m_periodweeks" name="m_periodweeks" onchange="ChangePeriodType()" style="left:440px;">
+    <option value="0">
+        Today</option>
+    <option value="1">
+        Last week</option>
+    <option value="4">
+        Last month</option>
+</select>
+<input type="hidden" name="m_from" id="m_from" value="16.03.2018">
+<input type="hidden" name="m_to" id="m_to" value="16.04.2018">
+
+
+<input type="radio" checked="" name="gen_type" id="gen_type_Current" value="gen_type_Current" class="radio1 row2" onclick="DisableSomeHeaders_Account_Balances_Filter(this)" style="left:340px;">
+<label for="gen_type_Current" class="row2" style="left:360px;">Current State</label>
+
+<input type="checkbox" id="BCLPrefVal" name="BCLPrefVal" value="2" class="row3" style="left:340px">
+<label for="BCLPrefVal" class="row3" style="left:360px;"> Show&nbsp;Bank client</label>
+<input type="hidden" name="submited" value="submited">
+
+</div>
+
+
+
+
+
+    
+    <div id="PagingHolder" style="display: none;"><table cellspacing="0" style="border-width:0px;border-collapse:collapse;">
+	<tbody><tr valign="top">
+		<td><span class="text"> Results per page: </span><select name="user_res_for_page" id="user_res_for_page" class="input" onchange="DisablePaging()">
+			<option value="5">5</option>
+			<option value="10">10</option>
+			<option value="20">20</option>
+			<option selected="" value="-1">All</option>
+		</select><span class="text"></span><input name="curr_page" type="hidden" id="curr_page" value="-3"></td>
+	</tr>
+</tbody></table><!-- nbsp --></div>
+        
+    <div class="btn-filter">
+		<a href="https://online.bulbank.bg/page/default.aspx?user_id=887317&amp;session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&amp;xml_id=/en-US/01Info/04Accounts/01Balances/#" onclick="document.forms[0].curr_page.value=&#39;1&#39;;SubmitAJAX()" class="btn red"><span>Show</span></a>
+		<a href="https://online.bulbank.bg/page/default.aspx?user_id=887317&amp;session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&amp;xml_id=/en-US/01Info/04Accounts/01Balances/#" onclick="ClearForm()" class="clear">Clear filter</a>
+    <br class="cl">
+    </div>
+    
+</div></div>
+</control><control></control><control><div id="ReportPicker_reportPickerDiv" class="reportPicker">
+<div id="reportPickerLabelDiv"></div>
+<input type="hidden" id="mediatype_archivateData" name="mediatype_archivateData">
+<input name="ReportPicker$mediatype_allowArchivateData" type="hidden" id="ReportPicker_mediatype_allowArchivateData">
+<nav class="exportIcons">
+<ul>
+<li><a href="javascript:exportto(&#39;xml&#39;)" id="ReportPicker_a_xml" title="Export to xml document"><img src="./Bulbank Online_files/white_code.png" alt="Export to xml document" border="0"></a></li>
+<li><a href="javascript:exportto(&#39;doc&#39;)" id="ReportPicker_a_doc" title="Export to Word document"><img src="./Bulbank Online_files/white_word.png" alt="Export to Word document" border="0"></a></li>
+<!--li>
+			<a href="javascript:exportto('pdf')" id="ReportPicker_a_pdf"><img src="/images/icons/pdf_small.gif" alt="Export to pdf document"  border="0"/></a>
+		</li-->
+<li><a href="javascript:exportto(&#39;xls&#39;)" id="ReportPicker_a_xls" title="Export to Excel document"><img src="./Bulbank Online_files/white_excel.png" alt="Export to Excel document" border="0"></a></li>
+<li><a href="javascript:exportto(&#39;csv&#39;)" id="ReportPicker_a_csv" title="Export to csv document"><img src="./Bulbank Online_files/white_database.png" alt="Export to csv document" border="0"></a></li>
+<li><a href="javascript:exportto(&#39;lpt&#39;)" id="ReportPicker_a_lpt" title="Print friendly view"><img src="./Bulbank Online_files/printer.png" alt="Print friendly view" border="0"></a></li>
+<br class="cl">
+</ul>
+</nav>
+<input type="hidden" name="mediatype" id="mediatype" value="">
+<script type="text/javascript">
+
+function exportto(type)
+{
+    if(BoolAnd(type!="lpt", $("#"+"ReportPicker_mediatype_allowArchivateData").val() == "true"))
+    {
+        $.daisConfirm("Would you like the exported file to be archived?").done(function(){
+            exporttoInner(type,true);
+        }).fail(function(){
+            exporttoInner(type,false);
+        });
+
+    }else{
+        exporttoInner(type,false);
+    }
+	
+}
+
+    function exporttoInner(type,archivateData){
+    var reportPickerArchDataSelector="#mediatype_archivateData";
+    $(reportPickerArchDataSelector).val(archivateData);
+	document.forms[0].mediatype.value = type;
+	document.forms[0].target = '_blank';
+	document.forms[0].submit();
+	document.forms[0].mediatype.value = '';
+    $(reportPickerArchDataSelector).val("");
+	document.forms[0].target = '_self';
+	DAIS.APERSON.SECURITY.SessionCountdown.updateSessionCountdownToDefaultValue();
+}
+
+$(document).ready(function () {
+    $('div.reportPicker ul li').each(
+          function () {
+              var elem = $(this);
+              if (elem.children().length == 0) {
+                  elem.remove();
+              }
+          }
+        );
+});
+
+</script></div></control><control></control></section><section><div id="result"><control><div id="divAPABalances"><div id="divAPABalances">
+  <input type="hidden" id="user_orderby" name="user_orderby" value="">
+  <input type="hidden" id="user_orderby_type" name="user_orderby_type" value="">
+  <table class="data">
+    <thead>
+      <tr>
+        <th style="width:30%;" user_order_by_class="BankAccount.BankAccountID" class="sort" user_order_by_class_use_ajax="true">Short name</th>
+        <th style="width:20%;text-align:right" user_order_by_class="ActualBalance" class="sort" user_order_by_class_use_ajax="true">Balance</th>
+        <th style="width:20%;text-align:right" user_order_by_class="AvailableBalance" class="sort" user_order_by_class_use_ajax="true">Available balance</th>
+        <th style="width:30%;" user_order_by_class="BalanceBiseraUpdateTime" class="sort" user_order_by_class_use_ajax="true">For</th>
+      </tr>
+    </thead>
+    <tbody><tr class="td-white">
+      <td width="11%">1523194179EUR</td>
+      <td nowrap="" width="5%" align="right" class="amt">    174 200 145.00</td>
+      <td nowrap="" width="8%" align="right" class="amt">    174 200 145.00</td>
+      <td nowrap="" width="11%" align="center">30.03.2018&nbsp;00:25:21</td>
+    </tr>
+    <tr class="td-grey">
+      <td width="11%">1523194179EUR</td>
+      <td nowrap="" width="5%" align="right" class="amt">    210 323 888.00</td>
+      <td nowrap="" width="8%" align="right" class="amt">    210 323 888.00</td>
+      <td nowrap="" width="11%" align="center">26.03.2018&nbsp;10:11:14</td>
+    </tr>
+    <tr class="td-white">
+      <td width="11%">1523194179EUR</td>
+      <td nowrap="" width="5%" align="right" class="amt">   100 077 222.00</td>
+      <td nowrap="" width="8%" align="right" class="amt">   100 077 222.00</td>
+      <td nowrap="" width="11%" align="center">20.03.2018&nbsp;21:06:51</td>
+    </tr>
+    <tr>
+      <td width="100%" colspan="5"></td>
+    </tr>
+  </tbody></table>
+</div></div></control><control><div><img src="./Bulbank Online_files/transparent.gif" width="190" height="1" alt=""><table width="100%">
+<tbody><tr>
+	<td width="100%" class="white"><span id="ShowFreeText1_m_ctrl_freetext"><div><root>* Available balance (current availability) - represents the amount of your own free funds plus the unutilized limit of a granted overdraft, if any
+</root><br></div></span>
+	</td>
+</tr>
+</tbody></table></div></control><control><div><img src="./Bulbank Online_files/transparent.gif" width="190" height="1" alt=""><table width="100%">
+<tbody><tr>
+	<td width="100%" class="white"><span id="ShowFreeText2_m_ctrl_freetext"><div><root>** Book balance (future availability) - represents the amount of your funds upon execution of the instructions for credit/debit transactions with future value date
+</root><br></div></span>
+	</td>
+</tr>
+</tbody></table></div></control>&nbsp;</div></section></div></div><footer id="footer"><div id="footer"><div id="foot_menu"><a href="https://online.bulbank.bg/page/default.aspx?user_id=887317&amp;session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&amp;xml_id=/en-US/.05Contacts/">Support center</a><input type="hidden" name="svfvlnk" id="svfvlnk"><a class="footerlink" href="https://online.bulbank.bg/page/default.aspx?user_id=887317&amp;session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&amp;xml_id=/en-US/01Info/04Accounts/01Balances/#" onclick="SaveAsFavouriteLink(&#39;/en-US/01Info/04Accounts/01Balances/&#39;);">Add this page as quick link</a><a href="https://www.unicreditbulbank.bg/en/legal-information/confidentiality/" target="_blank">
+    		                      Confidentiality
+    	                    </a><a href="https://www.unicreditbulbank.bg/en/legal-information/rights-use/" target="_blank">
+    		                      Rights of use
+                            </a><a href="https://online.bulbank.bg/page/default.aspx?user_id=887317&amp;session_id=3b127ee1821849e382d4ed115c09bd3bAm5KSbM/5bIH8jDRiSWV5iVE17XWp1w5D-SWKoRd5qEUnMWaislkPaCWVJ4NtC4ot-KtMCG55a58CDir2kxhRQ==CU&amp;xml_id=/en-US/.06Feedback/.UserFeedback">
+    		                      Share with us
+                            </a></div><div id="footer_bottom"><p>UniCredit Bulbank AD. All Rights Reserved. On DAIS eBank.NET&nbsp;©&nbsp;2011
+                            </p></div></div></footer></form><script type="text/javascript">( function(){ window.SIG_EXT = {}; } )()</script><script id="wappalyzer" src="chrome-extension://gppongmhjkpfnbhagpmjfkannfbllamg/js/inject.js"></script></body></html>
